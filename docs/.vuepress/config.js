@@ -1,7 +1,7 @@
 module.exports = {
-    title: '被代码耽误的裁缝',
+    title: '你的名字',
     // description: '倔强前端在线烧烤',
-    description: '----------',
+    description: '.',
     theme: 'reco',
     themeConfig: {
         // 博客配置
@@ -20,7 +20,8 @@ module.exports = {
             { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' }
         ],
         head: [
-            ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
+            ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+            ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
         ],
         // 备案
         record: '粤ICP备19055048号',
@@ -31,5 +32,5 @@ module.exports = {
         logo: '/head.png',
         authorAvatar: '/head.png',
         sidebar: 'auto'//在所有页面中启用自动生成侧栏
-    }
+    },
 }
