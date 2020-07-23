@@ -28,7 +28,7 @@ module.exports = {
         // 项目开始时间，只填写年份
         startYear: '2017',
         // author
-        author: 'duke shao',
+        author: 'Duke Shao',
         logo: '/head.png',
         authorAvatar: '/head.png',
         sidebar: 'auto'//在所有页面中启用自动生成侧栏
