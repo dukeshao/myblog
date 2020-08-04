@@ -231,4 +231,79 @@ docker kill [NAME]/[CONTAINER ID]:强制停止一个容器。
 
 ```
 
-<Vssue title="Vssue Demo" />
+## 常用命令2
+
+```bash
+1.docker version   #查看docker的版本
+2.docker info   #查看docker的详细信息
+3.docker images   #查看本地所有镜像
+4.docker images nginx   #查看本地与nginx的相关的镜像
+5.docker ps -a   #查看当前所有容器的状态（包括没有运行的）
+6.docker ps   #查看当前正在运行的容器的状态
+7.docker stop vm1   #停止容器vm1(容器vm1存在,并运行)
+8.docker start vm1   #启动容器vm1(容器vm1存在,但没有运行)
+9.docker kill vm1   #强制干掉容器vm1(容器vm1存在,并运行)
+10.docker attach vm1   #连接容器vm1(当容器vm1正在运行,要再次连接时,使用该命令)
+11.docker diff vm1   #查看容器vm1的修改(A – Add;D – Delete;C – Change)
+12.docker top vm1   #查看容器vm1的进程
+13.docker stats vm1   #查看容器vm1的资源使用率
+14.docker pause/unpause vm1   #暂停/恢复容器vm1(但是docker ps中显示仍在运行状态)
+15.docker cp index.html vm1:/usr/share/nginx/html   #同docker container cp index.html vm1:/usr/share/nginx/html。拷贝index.html文件到nginx创建的容器vm1的默认发布目录(/usr/share/nginx/html)下。在"Linux下docker应用初体验之nginx，ubuntu，rhel7镜像的使用"文章中使用过。
+16.docker logs vm1   #查看容器vm1的日志(即在容器vm1中的所有操作)
+17.docker port vm1   #查看容器vm1的端口映射情况(容器vm1正在运行)
+18.docker network ls   #列出当前有哪些网络类型
+19.docker volume ls   #列出当前有哪些数据卷
+20.docker build -t rhel7:apache .   #使用当前目录下Dockerfile文件创建镜像rhel7:apache
+21.docker tag rhel7:nginx4 localhost:5000/rhel7:nginx4   #相当于将rhel7:nginx4镜像复制一份出来,名字为localhost:5000/rhel7:nginx4
+22.docker login xin.org   #登录xin.org
+23.docker logout xin.org  #退出xin.org
+23.docker run -d --name vm1 ubuntu   #使用镜像ubuntu创建容器vm1,并运行。(-d表示后台运行容器,并返回容器ID)
+24.docker run -it --name vm1 ubuntu   #使用镜像ubuntu创建容器vm1,并运行,并进入交互界面。
+25.docker run -it --name vm1 rhel7 bash   #使用镜像rhel7创建容器vm1,并与其进行bash交互;(-i:以交互模式运行容器,通常与-t一起使用;-t:为容器重新分配一个伪输入终端)
+26.docker run -d --name vm1 -v /tmp/docker:/usr/share/nginx/html nginx   #使用镜像nginx创建容器vm1,并运行,并将本地主机的/tmp/docker目录挂载到容器vm1内的/usr/share/nginx/html目录下。(即本地主机/tmp/docker目录下有什么内容,那容器vm1的/usr/share/nginx/html目录中就有什么内容)。在"Linux下docker应用初体验之nginx，ubuntu，rhel7镜像的使用"文章中使用过。
+27.docker exec -it vm1 /bin/bash   #进入容器vm1的bash界面(此时容器vm1正在运行)
+ 28.docker run --rm busybox:v1   #用busybox:v1镜像创建容器,并运行,运行完成之后,立即删除
+29.docker run -it --rm ubuntu   #用ubuntu镜像创建容器,并运行,运行完成之后,立即删除
+30.docker commit vm1 ubuntu:v1   #将容器vm1打包生成ubuntu:v1镜像
+31.docker inspect vm1   #查看容器vm1的详情
+32.docker inspect nginx   #查看镜像vm1的详情
+33.docker rmi nginx   #删除nginx镜像
+34.docker rm vm1   #删除容器vm1
+#当容器正在运行时,使用该命令回报错。应该先docker stop vm1停止vm1容器,再docker rm vm1删除容器vm1。当然,也可以使用docker rm -f vm1强制删除正在运行的容器vm1。
+#即docker rm -f vm1相当于docker stop vm1 + docker rm vm1。
+35.docker history nginx   #查看nginx镜像的历史
+36.docker load -i ubuntu.tar   #导入ubuntu.tar,以添加镜像ubuntu
+37.docker import vm1.tar image   #导入容器vm1.tar为镜像image
+38.docker save ubuntu > ubuntu.tar   #导出镜像ubuntu
+39.docker export vm1 > vm1.tar   #导出容器vm1
+40.docker search  镜像名的一部分   #查找镜像（如:docker search nginx  #查找与nginx相关的镜像）
+41.docker pull 镜像名  #拉取镜像
+42.docker push 镜像名  #推送镜像
+43.docker container ls   #同docker ps,查看正在运行的容器
+44.docker container prune    #删除所有运行停止的容器
+45.docker rm -f `docker ps -aq`   #删除所有容器(运行的和没运行的)
+```
+
+
+
+```bash
+docker attach vm1 #进入已经创建好的容器
+docker diff vm5 #使用docker diff命令查看容器vm5的修改信息
+docker container prune  #清理停止状态的容器的可写层
+```
+
+
+
+安装软件bash-*可以解决docker命令补不全的问题
+
+```bash
+yum install bash-* -y 
+```
+
+退出bash的两种操作
+
+```bash
+Ctrl + d 退出并停止容器
+Ctrl + p + q 退出并在后台运行容器；
+```
+

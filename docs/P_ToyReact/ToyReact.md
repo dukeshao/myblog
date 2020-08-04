@@ -1,0 +1,1 @@
+Webpack 就单纯的 mode(production/development)的差别就是，默认是 production 模式，打包后的 js 代码是经过压缩的，显式的声明 development 模式，打包后的 js 代码是没有压缩的，利于我们开发过程中的调试

@@ -1,7 +1,6 @@
 module.exports = {
     title: '你的名字',
-    // description: '倔强前端在线烧烤',
-    description: '.',
+    description: '持续学习那些不变的底层知识',
     theme: 'reco',
     themeConfig: {
         // 博客配置
