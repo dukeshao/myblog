@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>angularJS过滤器 | 你的名字</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="持续学习那些不变的底层知识">
+    <link rel="preload" href="/assets/css/0.styles.cf364661.css" as="style"><link rel="preload" href="/assets/js/app.37a344aa.js" as="script"><link rel="preload" href="/assets/js/3.27823f6c.js" as="script"><link rel="preload" href="/assets/js/1.cc6167c7.js" as="script"><link rel="preload" href="/assets/js/37.a09721b8.js" as="script"><link rel="prefetch" href="/assets/js/10.4fc031af.js"><link rel="prefetch" href="/assets/js/11.e3772f3e.js"><link rel="prefetch" href="/assets/js/12.b31c219d.js"><link rel="prefetch" href="/assets/js/13.a43e0022.js"><link rel="prefetch" href="/assets/js/14.d72f4213.js"><link rel="prefetch" href="/assets/js/15.bcb8d2c6.js"><link rel="prefetch" href="/assets/js/16.4b891440.js"><link rel="prefetch" href="/assets/js/17.ba0d4562.js"><link rel="prefetch" href="/assets/js/18.70ef9823.js"><link rel="prefetch" href="/assets/js/19.8fa29ce1.js"><link rel="prefetch" href="/assets/js/20.3935a720.js"><link rel="prefetch" href="/assets/js/21.cecaea6f.js"><link rel="prefetch" href="/assets/js/22.7825612a.js"><link rel="prefetch" href="/assets/js/23.bea3b71f.js"><link rel="prefetch" href="/assets/js/24.758aab56.js"><link rel="prefetch" href="/assets/js/25.2f984301.js"><link rel="prefetch" href="/assets/js/26.91717f84.js"><link rel="prefetch" href="/assets/js/27.3bab334b.js"><link rel="prefetch" href="/assets/js/28.47ce6f2a.js"><link rel="prefetch" href="/assets/js/29.5b34be08.js"><link rel="prefetch" href="/assets/js/30.67a38d00.js"><link rel="prefetch" href="/assets/js/31.e68df368.js"><link rel="prefetch" href="/assets/js/32.955a9acb.js"><link rel="prefetch" href="/assets/js/33.67f713ca.js"><link rel="prefetch" href="/assets/js/34.9827b998.js"><link rel="prefetch" href="/assets/js/35.0c08c34a.js"><link rel="prefetch" href="/assets/js/36.1fafef03.js"><link rel="prefetch" href="/assets/js/38.80a6d3fe.js"><link rel="prefetch" href="/assets/js/39.d7e39752.js"><link rel="prefetch" href="/assets/js/4.c5dc9af6.js"><link rel="prefetch" href="/assets/js/40.c1427058.js"><link rel="prefetch" href="/assets/js/41.f48a2aa1.js"><link rel="prefetch" href="/assets/js/42.268c65ef.js"><link rel="prefetch" href="/assets/js/43.f5bbe7ab.js"><link rel="prefetch" href="/assets/js/44.bb9e88b1.js"><link rel="prefetch" href="/assets/js/45.f11ff196.js"><link rel="prefetch" href="/assets/js/46.8a0134aa.js"><link rel="prefetch" href="/assets/js/47.8ab35044.js"><link rel="prefetch" href="/assets/js/48.d7977d49.js"><link rel="prefetch" href="/assets/js/49.6761377d.js"><link rel="prefetch" href="/assets/js/5.53ecbcea.js"><link rel="prefetch" href="/assets/js/50.9401224f.js"><link rel="prefetch" href="/assets/js/51.55ba23e7.js"><link rel="prefetch" href="/assets/js/52.28d0356d.js"><link rel="prefetch" href="/assets/js/53.e22fa6fb.js"><link rel="prefetch" href="/assets/js/54.6b190cf3.js"><link rel="prefetch" href="/assets/js/55.1393bf52.js"><link rel="prefetch" href="/assets/js/6.d943a739.js"><link rel="prefetch" href="/assets/js/7.c9cdceb6.js"><link rel="prefetch" href="/assets/js/8.45f2fa75.js"><link rel="prefetch" href="/assets/js/9.7f603727.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cf364661.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>你的名字</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Duke Shao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="你的名字" class="logo"> <span class="site-name">你的名字</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/B_Javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  B_Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/A_HTML+CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  A_HTML+CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/C_Typescript/" class="nav-link"><i class="iconfont undefined"></i>
+  C_Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/D_AngularJS/" class="nav-link"><i class="iconfont undefined"></i>
+  D_AngularJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/G_Git/" class="nav-link"><i class="iconfont undefined"></i>
+  G_Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/J_加密解密/" class="nav-link"><i class="iconfont undefined"></i>
+  J_加密解密
+</a></li><li class="dropdown-item"><!----> <a href="/categories/K_浏览器兼容/" class="nav-link"><i class="iconfont undefined"></i>
+  K_浏览器兼容
+</a></li><li class="dropdown-item"><!----> <a href="/categories/L_Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  L_Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/M_服务器部署/" class="nav-link"><i class="iconfont undefined"></i>
+  M_服务器部署
+</a></li><li class="dropdown-item"><!----> <a href="/categories/N_MAC使用/" class="nav-link"><i class="iconfont undefined"></i>
+  N_MAC使用
+</a></li><li class="dropdown-item"><!----> <a href="/categories/H_Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  H_Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/I_Hexo博客/" class="nav-link"><i class="iconfont undefined"></i>
+  I_Hexo博客
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/head.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Duke Shao
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>42</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>24</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/B_Javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  B_Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/A_HTML+CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  A_HTML+CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/C_Typescript/" class="nav-link"><i class="iconfont undefined"></i>
+  C_Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/D_AngularJS/" class="nav-link"><i class="iconfont undefined"></i>
+  D_AngularJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/G_Git/" class="nav-link"><i class="iconfont undefined"></i>
+  G_Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/J_加密解密/" class="nav-link"><i class="iconfont undefined"></i>
+  J_加密解密
+</a></li><li class="dropdown-item"><!----> <a href="/categories/K_浏览器兼容/" class="nav-link"><i class="iconfont undefined"></i>
+  K_浏览器兼容
+</a></li><li class="dropdown-item"><!----> <a href="/categories/L_Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  L_Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/M_服务器部署/" class="nav-link"><i class="iconfont undefined"></i>
+  M_服务器部署
+</a></li><li class="dropdown-item"><!----> <a href="/categories/N_MAC使用/" class="nav-link"><i class="iconfont undefined"></i>
+  N_MAC使用
+</a></li><li class="dropdown-item"><!----> <a href="/categories/H_Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  H_Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/I_Hexo博客/" class="nav-link"><i class="iconfont undefined"></i>
+  I_Hexo博客
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>angularJS过滤器</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Duke Shao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>angularJS过滤器</h1> <hr> <div data-v-aa64b9d0><i class="iconfont reco-account" data-v-aa64b9d0><span data-v-aa64b9d0>Duke Shao</span></i> <i class="iconfont reco-date" data-v-aa64b9d0><span data-v-aa64b9d0>2019-10-27 14:49:31</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="一、angularjs-内置-filter"><a href="#一、angularjs-内置-filter" class="header-anchor">#</a> 一、angularJS 内置 filter</h2> <h2 id="_1-currency"><a href="#_1-currency" class="header-anchor">#</a> 1.currency:</h2> <p>格式化一个数字成为一种货币。当没有提供任何货币符号时，使用当前区域的默认符号。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTML</span>：<span class="token punctuation">{</span><span class="token punctuation">{</span> currency_expression <span class="token operator">|</span> currency<span class="token operator">:</span>symbol<span class="token operator">:</span>fractionSize<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token constant">JS</span><span class="token function">：$filter</span><span class="token punctuation">(</span>“currency”<span class="token punctuation">)</span><span class="token punctuation">(</span>amount<span class="token punctuation">,</span>symbol<span class="token punctuation">,</span>fractionSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+amount：数值，过滤的值。
+
+symbol：字符串，要显示的货币符号或标识符。
+
+fractionSize：数值，整数的小数位数，默认为当前的最大位数。
+</code></pre></div><h2 id="_2-number"><a href="#_2-number" class="header-anchor">#</a> 2.number:</h2> <p>格式化数字成为文本</p> <p>示例：number</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 保留几位小数 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{{volume.usedCapacityMb/1024 | number:0 || &quot;0&quot;}}G<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+HTML：{{number_expression | number:fractionSize}}
+
+JS：$filter(“number”)(number,fractionSize);
+
+number：转换的数值。
+
+fractionSize：数值，整数的小数位数，默认为当前的最大位数。在默认的区域设置的情况下这个数值是3。
+</code></pre></div><h2 id="_3-filter"><a href="#_3-filter" class="header-anchor">#</a> 3.filter:</h2> <p>从数组中选择一个子集,并将其返回为一个新数组</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTML</span>：<span class="token punctuation">{</span><span class="token punctuation">{</span>filter_expression <span class="token operator">|</span> filter<span class="token operator">:</span>expression<span class="token operator">:</span>comparator<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token constant">JS</span><span class="token function">：$filter</span><span class="token punctuation">(</span>“filter”<span class="token punctuation">)</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span>expression<span class="token punctuation">,</span>comparator<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+array：被过滤的数组。
+
+expression：字符串<span class="token operator">/</span>对象<span class="token operator">/</span>函数，用于从数组中选择数据的判断表达式。使用$可以匹配任何字段。
+
+comparator：函数<span class="token operator">/</span>Boolean<span class="token operator">/</span><span class="token keyword">undefined</span>，用于确定预期的值（从filter表达式返回）和实际的值（数组中的对象）进行比较，应视为匹配。<span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">actual<span class="token punctuation">,</span>expected</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_4-date："><a href="#_4-date：" class="header-anchor">#</a> 4.date：</h2> <p>基于要求的格式格式化日期为字符串</p> <p>示例：date</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 时间格式化 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{row.creationTimestamp | date:'yyyy-MM-dd HH:mm:ss' }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+
+HTML：{{date_expression | date:format:timezone}}
+
+JS：$filter(“date”)(date,format,timezone);
+
+date：格式化为日期的日期对象。如果没有指定输入的时区字符串，时间则是当地时间。
+
+format：格式规则/格式。
+
+timezone：时区。
+</code></pre></div><h2 id="_5-json："><a href="#_5-json：" class="header-anchor">#</a> 5.json：</h2> <p>允许你将一个javascript对象转化为JSON字符串</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTML</span>：<span class="token punctuation">{</span><span class="token punctuation">{</span>json_expression <span class="token operator">|</span> json<span class="token operator">:</span>spacing<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token constant">JS</span><span class="token function">：$filter</span><span class="token punctuation">(</span>“json”<span class="token punctuation">)</span><span class="token punctuation">(</span>object<span class="token punctuation">,</span>spacing<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+object：过滤的对象。
+
+spacing：每个缩进的空格数，默认为<span class="token number">2</span>。
+</code></pre></div><h2 id="_6-lowercase："><a href="#_6-lowercase：" class="header-anchor">#</a> 6.lowercase：</h2> <p>转换字符串成为小写</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTML</span>：<span class="token punctuation">{</span><span class="token punctuation">{</span>lowercase_expression <span class="token operator">|</span> lowercase<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token constant">JS</span><span class="token function">：$filter</span><span class="token punctuation">(</span>“lowercase”<span class="token punctuation">)</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Input：过滤的字符串。
+</code></pre></div><h2 id="_7-uppercase："><a href="#_7-uppercase：" class="header-anchor">#</a> 7.uppercase：</h2> <p>转换字符串成为大写</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTML</span>：<span class="token punctuation">{</span><span class="token punctuation">{</span>uppercase_expression <span class="token operator">|</span>uppercase<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token constant">JS</span><span class="token function">：$filter</span><span class="token punctuation">(</span>“uppercase”<span class="token punctuation">)</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Input：过滤的字符串。
+</code></pre></div><h2 id="_8-limitto："><a href="#_8-limitto：" class="header-anchor">#</a> 8.limitTo：</h2> <p>将数组/字符串限定为一个指定的元素/字符数。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTML</span>：<span class="token punctuation">{</span><span class="token punctuation">{</span>limitTo_expression <span class="token operator">|</span> limitTo<span class="token operator">:</span>limit<span class="token operator">:</span>begin<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token constant">JS</span><span class="token function">：$filter</span><span class="token punctuation">(</span>“limitTo”<span class="token punctuation">)</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span>limit<span class="token punctuation">,</span>begin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+input：限制的数组，字符串，数字。
+
+limit：限制的长度。
+
+begin：限制长度开始的位置（根据索引）。
+</code></pre></div><h2 id="_9-orderby"><a href="#_9-orderby" class="header-anchor">#</a> 9.orderBy:</h2> <p>通过给定的表达式指定数组，它是按字母顺序排列的字符串和数值。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">HTML</span>：<span class="token punctuation">{</span><span class="token punctuation">{</span>orderBy_expression <span class="token operator">|</span> orderBy<span class="token operator">:</span>expression<span class="token operator">:</span>reverse<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token constant">JS</span><span class="token function">：$filter</span><span class="token punctuation">(</span>“orderBy”<span class="token punctuation">)</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span>expression<span class="token punctuation">,</span>reverse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+array：排序的数组。
+
+expression：字符串<span class="token operator">/</span>函数<span class="token operator">/</span>数组，用来确定元素顺序的表达式。
+
+reverse：boolean，颠倒数组的顺序。默认为<span class="token boolean">false</span>。
+</code></pre></div><p>示例：orderBy</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- 排序 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">ng-repeat</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>PrivilegesList in (ctrl.PrivilegesLists  | orderBy:'category')<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{(ctrl.categoryList | filter:{name:PrivilegesList.category}: true)[0].displayName}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{PrivilegesList.displayName}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>{{PrivilegesList.description}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">ng-repeat</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>file in ctrl.filesList | orderBy:'type':true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">ng-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>file.type=='tree'<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-hidden</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fa fa-folder fa-fw<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">ng-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>file.type=='blob'<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-hidden</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span>
+           <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fa fa-file-text-o fa-fw<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>fileName<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ctrl.openFile(file)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> {{file.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">ng-repeat</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pipeline in ctrl.pipelineList | orderBy:ctrl.sortKey:ctrl.reverse<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>示例3：hignlight</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!--  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ui-select</span> <span class="token attr-name">multiple</span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ctrl.selectedpools<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>pools<span class="token punctuation">&quot;</span></span> <span class="token attr-name">theme</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bootstrap<span class="token punctuation">&quot;</span></span> <span class="token attr-name">require</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ui-select-match</span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>选择资源池<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">ng-bind</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$item.name<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ui-select-match</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ui-select-choices</span> <span class="token attr-name">repeat</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item.id as item in ctrl.poolList | filter:$select.search track by $index<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{{item.name | highlight:$select.search}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ui-select-choices</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ui-select</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="二、用法介绍"><a href="#二、用法介绍" class="header-anchor">#</a> 二、用法介绍</h2> <h2 id="_1-在-html-表达式中使用"><a href="#_1-在-html-表达式中使用" class="header-anchor">#</a> 1.在 html 表达式中使用</h2> <p>filter可以用管道符 | 添加到表达式:</p> <p>也可以多个filter连用，上一个filter的输出作为下一个filter的输入：</p> <p></p> <h2 id="_2-在-html-指令中使用"><a href="#_2-在-html-指令中使用" class="header-anchor">#</a> 2.在 html 指令中使用</h2> <p>可使用参数：例如: &lt;li ng-repeat=“x in names | orderBy:’country’”&gt;或&lt;li ng-repeat=“x in names | filter : ‘i’&gt;</p> <h2 id="_3-在-js-中使用"><a href="#_3-在-js-中使用" class="header-anchor">#</a> 3.在 JS 中使用</h2> <p>$scope.formatDate = $filter('date')(today, 'yyyy-MM-dd');</p> <div class="language-js extra-class"><pre class="language-js"><code>$scope<span class="token punctuation">.</span>formatDate <span class="token operator">=</span> <span class="token function">$filter</span><span class="token punctuation">(</span><span class="token string">'date'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>today<span class="token punctuation">,</span> <span class="token string">'yyyy-MM-dd'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token string">'接收的变量'</span> <span class="token operator">=</span> <span class="token function">$filter</span><span class="token punctuation">(</span><span class="token string">'过滤'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="三、自定义过滤器"><a href="#三、自定义过滤器" class="header-anchor">#</a> 三、自定义过滤器</h2></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-40a3448a><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#一、angularjs-内置-filter" class="sidebar-link" data-v-40a3448a>一、angularJS 内置 filter</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_1-currency" class="sidebar-link" data-v-40a3448a>1.currency:</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_2-number" class="sidebar-link" data-v-40a3448a>2.number:</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_3-filter" class="sidebar-link" data-v-40a3448a>3.filter:</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_4-date：" class="sidebar-link" data-v-40a3448a>4.date：</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_5-json：" class="sidebar-link" data-v-40a3448a>5.json：</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_6-lowercase：" class="sidebar-link" data-v-40a3448a>6.lowercase：</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_7-uppercase：" class="sidebar-link" data-v-40a3448a>7.uppercase：</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_8-limitto：" class="sidebar-link" data-v-40a3448a>8.limitTo：</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_9-orderby" class="sidebar-link" data-v-40a3448a>9.orderBy:</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#二、用法介绍" class="sidebar-link" data-v-40a3448a>二、用法介绍</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_1-在-html-表达式中使用" class="sidebar-link" data-v-40a3448a>1.在 html 表达式中使用</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_2-在-html-指令中使用" class="sidebar-link" data-v-40a3448a>2.在 html 指令中使用</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#_3-在-js-中使用" class="sidebar-link" data-v-40a3448a>3.在 JS 中使用</a></li><li class="level-2" data-v-40a3448a><a href="/D_AngularJS/angularJS%E8%BF%87%E6%BB%A4%E5%99%A8.html#三、自定义过滤器" class="sidebar-link" data-v-40a3448a>三、自定义过滤器</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.37a344aa.js" defer></script><script src="/assets/js/3.27823f6c.js" defer></script><script src="/assets/js/1.cc6167c7.js" defer></script><script src="/assets/js/37.a09721b8.js" defer></script>
+  </body>
+</html>

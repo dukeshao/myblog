@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Javascript 进阶 | 你的名字</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="持续学习那些不变的底层知识">
+    <link rel="preload" href="/assets/css/0.styles.cf364661.css" as="style"><link rel="preload" href="/assets/js/app.37a344aa.js" as="script"><link rel="preload" href="/assets/js/3.27823f6c.js" as="script"><link rel="preload" href="/assets/js/1.cc6167c7.js" as="script"><link rel="preload" href="/assets/js/14.d72f4213.js" as="script"><link rel="prefetch" href="/assets/js/10.4fc031af.js"><link rel="prefetch" href="/assets/js/11.e3772f3e.js"><link rel="prefetch" href="/assets/js/12.b31c219d.js"><link rel="prefetch" href="/assets/js/13.a43e0022.js"><link rel="prefetch" href="/assets/js/15.bcb8d2c6.js"><link rel="prefetch" href="/assets/js/16.4b891440.js"><link rel="prefetch" href="/assets/js/17.ba0d4562.js"><link rel="prefetch" href="/assets/js/18.70ef9823.js"><link rel="prefetch" href="/assets/js/19.8fa29ce1.js"><link rel="prefetch" href="/assets/js/20.3935a720.js"><link rel="prefetch" href="/assets/js/21.cecaea6f.js"><link rel="prefetch" href="/assets/js/22.7825612a.js"><link rel="prefetch" href="/assets/js/23.bea3b71f.js"><link rel="prefetch" href="/assets/js/24.758aab56.js"><link rel="prefetch" href="/assets/js/25.2f984301.js"><link rel="prefetch" href="/assets/js/26.91717f84.js"><link rel="prefetch" href="/assets/js/27.3bab334b.js"><link rel="prefetch" href="/assets/js/28.47ce6f2a.js"><link rel="prefetch" href="/assets/js/29.5b34be08.js"><link rel="prefetch" href="/assets/js/30.67a38d00.js"><link rel="prefetch" href="/assets/js/31.e68df368.js"><link rel="prefetch" href="/assets/js/32.955a9acb.js"><link rel="prefetch" href="/assets/js/33.67f713ca.js"><link rel="prefetch" href="/assets/js/34.9827b998.js"><link rel="prefetch" href="/assets/js/35.0c08c34a.js"><link rel="prefetch" href="/assets/js/36.1fafef03.js"><link rel="prefetch" href="/assets/js/37.a09721b8.js"><link rel="prefetch" href="/assets/js/38.80a6d3fe.js"><link rel="prefetch" href="/assets/js/39.d7e39752.js"><link rel="prefetch" href="/assets/js/4.c5dc9af6.js"><link rel="prefetch" href="/assets/js/40.c1427058.js"><link rel="prefetch" href="/assets/js/41.f48a2aa1.js"><link rel="prefetch" href="/assets/js/42.268c65ef.js"><link rel="prefetch" href="/assets/js/43.f5bbe7ab.js"><link rel="prefetch" href="/assets/js/44.bb9e88b1.js"><link rel="prefetch" href="/assets/js/45.f11ff196.js"><link rel="prefetch" href="/assets/js/46.8a0134aa.js"><link rel="prefetch" href="/assets/js/47.8ab35044.js"><link rel="prefetch" href="/assets/js/48.d7977d49.js"><link rel="prefetch" href="/assets/js/49.6761377d.js"><link rel="prefetch" href="/assets/js/5.53ecbcea.js"><link rel="prefetch" href="/assets/js/50.9401224f.js"><link rel="prefetch" href="/assets/js/51.55ba23e7.js"><link rel="prefetch" href="/assets/js/52.28d0356d.js"><link rel="prefetch" href="/assets/js/53.e22fa6fb.js"><link rel="prefetch" href="/assets/js/54.6b190cf3.js"><link rel="prefetch" href="/assets/js/55.1393bf52.js"><link rel="prefetch" href="/assets/js/6.d943a739.js"><link rel="prefetch" href="/assets/js/7.c9cdceb6.js"><link rel="prefetch" href="/assets/js/8.45f2fa75.js"><link rel="prefetch" href="/assets/js/9.7f603727.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cf364661.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>你的名字</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Duke Shao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="你的名字" class="logo"> <span class="site-name">你的名字</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/B_Javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  B_Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/A_HTML+CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  A_HTML+CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/C_Typescript/" class="nav-link"><i class="iconfont undefined"></i>
+  C_Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/D_AngularJS/" class="nav-link"><i class="iconfont undefined"></i>
+  D_AngularJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/G_Git/" class="nav-link"><i class="iconfont undefined"></i>
+  G_Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/J_加密解密/" class="nav-link"><i class="iconfont undefined"></i>
+  J_加密解密
+</a></li><li class="dropdown-item"><!----> <a href="/categories/K_浏览器兼容/" class="nav-link"><i class="iconfont undefined"></i>
+  K_浏览器兼容
+</a></li><li class="dropdown-item"><!----> <a href="/categories/L_Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  L_Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/M_服务器部署/" class="nav-link"><i class="iconfont undefined"></i>
+  M_服务器部署
+</a></li><li class="dropdown-item"><!----> <a href="/categories/N_MAC使用/" class="nav-link"><i class="iconfont undefined"></i>
+  N_MAC使用
+</a></li><li class="dropdown-item"><!----> <a href="/categories/H_Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  H_Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/I_Hexo博客/" class="nav-link"><i class="iconfont undefined"></i>
+  I_Hexo博客
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/head.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Duke Shao
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>42</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>24</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/B_Javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  B_Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/A_HTML+CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  A_HTML+CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/C_Typescript/" class="nav-link"><i class="iconfont undefined"></i>
+  C_Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/D_AngularJS/" class="nav-link"><i class="iconfont undefined"></i>
+  D_AngularJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/G_Git/" class="nav-link"><i class="iconfont undefined"></i>
+  G_Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/J_加密解密/" class="nav-link"><i class="iconfont undefined"></i>
+  J_加密解密
+</a></li><li class="dropdown-item"><!----> <a href="/categories/K_浏览器兼容/" class="nav-link"><i class="iconfont undefined"></i>
+  K_浏览器兼容
+</a></li><li class="dropdown-item"><!----> <a href="/categories/L_Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  L_Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/M_服务器部署/" class="nav-link"><i class="iconfont undefined"></i>
+  M_服务器部署
+</a></li><li class="dropdown-item"><!----> <a href="/categories/N_MAC使用/" class="nav-link"><i class="iconfont undefined"></i>
+  N_MAC使用
+</a></li><li class="dropdown-item"><!----> <a href="/categories/H_Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  H_Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/I_Hexo博客/" class="nav-link"><i class="iconfont undefined"></i>
+  I_Hexo博客
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Javascript 进阶</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Duke Shao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>Javascript 进阶</h1> <hr> <div data-v-aa64b9d0><i class="iconfont reco-account" data-v-aa64b9d0><span data-v-aa64b9d0>Duke Shao</span></i> <i class="iconfont reco-date" data-v-aa64b9d0><span data-v-aa64b9d0>2015-10-02 23:18:33</span></i> <!----> <i class="iconfont reco-tag tags" data-v-aa64b9d0><span class="tag-item" data-v-aa64b9d0>Javascript</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="一、函数"><a href="#一、函数" class="header-anchor">#</a> 一、函数</h1> <h2 id="_1-概念"><a href="#_1-概念" class="header-anchor">#</a> 1.概念</h2> <p>函数就是把特定功能的代码抽取出并进行封装，用来重复执行一些功能。</p> <h2 id="_2-优点"><a href="#_2-优点" class="header-anchor">#</a> 2.优点</h2> <p>函数可以重复执行某一部分代码（通过函数名调用）；</p> <p>使程序变得更简短而清晰；</p> <p>有利于程序维护；</p> <h2 id="_3-创建方式"><a href="#_3-创建方式" class="header-anchor">#</a> 3.创建方式</h2> <h4 id="a-关键字声明"><a href="#a-关键字声明" class="header-anchor">#</a> a.关键字声明</h4> <p>​	function 函数名(形参){执行的功能代码}</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="b-赋值式声明"><a href="#b-赋值式声明" class="header-anchor">#</a> b.赋值式声明</h4> <p>​	var 函数名=function(形参){执行的功能代码}</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">fn</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span>b</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="c-构造函数法"><a href="#c-构造函数法" class="header-anchor">#</a> c.构造函数法</h4> <p>​	 var 函数名=new Function();不推荐使用</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> fn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_4-分类"><a href="#_4-分类" class="header-anchor">#</a> 4.分类</h2> <p>1	内置函数</p> <p>2	自定义函数</p> <p>3	匿名函数</p> <p>function(形参){执行的功能代码}</p> <h2 id="_5-函数的执行"><a href="#_5-函数的执行" class="header-anchor">#</a> 5.函数的执行</h2> <p>1	主动执行：</p> <p>​	函数名()</p> <p>2	事件驱动：</p> <p>​	ele.onclick=函数名;</p> <p>​	ele.onclick=function(){}</p> <h2 id="_6-作用域"><a href="#_6-作用域" class="header-anchor">#</a> 6.作用域</h2> <p>（一）分类</p> <h3 id="_1全局作用域"><a href="#_1全局作用域" class="header-anchor">#</a> 1	全局作用域</h3> <p>全局变量：在函数外定义的变量称为全局变量</p> <h3 id="_2局部作用域"><a href="#_2局部作用域" class="header-anchor">#</a> 2	局部作用域</h3> <p>局部变量：在函数内定义的变量</p> <h3 id="_3变量的访问规则"><a href="#_3变量的访问规则" class="header-anchor">#</a> 3	变量的访问规则</h3> <p>​	(1)	若在某个函数内部使用一个变量，那么先查找该函数内是否有变量声明；</p> <p>​	(2)	如果当前函数无变量a，则往父级函数查找，如果找到则使用，并停止查找；</p> <p>​	(3)	如果在父级函数还是无法找到，则继续往上一层函数查找，以此类推；</p> <p>​	(4)	直到最顶层(全局作用域)，如果还是没找到，则报错误** is not defined；</p> <p>在函数内若没有通过var 声明变量，相当于在全局作用域用var 声明了该变量</p> <h3 id="_4作用域链"><a href="#_4作用域链" class="header-anchor">#</a> 4	作用域链</h3> <p>​	当函数访问变量时，根据就近原则从内到外查询变量，这个路径称为作用域链;</p> <h2 id="_7-函数的实参与形参"><a href="#_7-函数的实参与形参" class="header-anchor">#</a> 7.函数的实参与形参</h2> <p>1	形参：函数定义时的参数（变量）</p> <p>2	实参：函数执行时的参数（值）</p> <p>形参与实参个数可以不一致</p> <p>函数内部隐藏的对象（是一个类数组），保存着实参的信息</p> <p>一、声明提前</p> <p>概念：代码从上往下顺序执行之前，会将所有的声明提升到当前作用域的最顶端，之后顺序执行</p> <p>在变量赋值之前使用变量，变量的值为undefined</p> <p>用赋值式声明函数，若在声明之前调用函数，会报错，** is not  a function；</p> <p>用关键字声明函数，可以在声明之前调用函数</p> <h2 id="基本数据类型与引用数据类型的区别"><a href="#基本数据类型与引用数据类型的区别" class="header-anchor">#</a> 基本数据类型与引用数据类型的区别</h2> <div class="language- extra-class"><pre class="language-text"><code>基本数据类型放在栈中,引用数据类型放在堆中
+</code></pre></div><h3 id="①-案例："><a href="#①-案例：" class="header-anchor">#</a> ①　案例：</h3> <div class="language- extra-class"><pre class="language-text"><code>var a=10;
+var b=a;
+b++;
+console.log(a,b);//10,11
+
+var arr=[1,2,3];
+var brr=arr;
+brr[1]=20;
+console.log(arr===brr);//true
+</code></pre></div><h3 id="②-数据类型作为函数的参数"><a href="#②-数据类型作为函数的参数" class="header-anchor">#</a> ②　数据类型作为函数的参数</h3> <div class="language- extra-class"><pre class="language-text"><code>//基本数据类型,传递的是值
+function numAdd(num){
+    num++;
+    console.log(num);//11
+}
+
+var a=10;
+numAdd(a);
+console.log(a);//10
+
+//引用数据类型,传递的是地址
+function numAdd(arr){
+    arr[0]=10;
+    console.log(arr);//[10,2]
+}
+
+var arr1=[1,2];
+numAdd(arr1);
+console.log(arr1);//10,2
+</code></pre></div><h2 id="函数的返回值"><a href="#函数的返回值" class="header-anchor">#</a> 函数的返回值</h2> <p>1	概念：通过return将函数内部的值返回到函数外，函数外若要使用，必须接收。</p> <p>2	如果函数没有return，执行完后返回undefined</p> <p>3	return 后面的代码不会被执行</p> <h2 id="this"><a href="#this" class="header-anchor">#</a> this</h2> <p>1	表示当前对象，取决于谁调用了这个函数</p> <p>2	直接执行，this 为window；事件驱动，this为绑定的元素。</p> <h2 id="递归"><a href="#递归" class="header-anchor">#</a> 递归</h2> <p>（自己调用自己）</p> <p>1	容易出现死循环</p> <p>2	递归避免死循环，设置好临界点return</p> <h2 id="回调函数"><a href="#回调函数" class="header-anchor">#</a> 回调函数</h2> <p>（函数作为参数传递）</p> <h1 id="二、数组"><a href="#二、数组" class="header-anchor">#</a> 二、数组</h1> <h2 id="概念："><a href="#概念：" class="header-anchor">#</a> 概念：</h2> <p>一系列数据的集合，每一项（数组的元素）可以保存任何类型的数据，每个元素之间用逗号隔开
+2.数组的声明
+(1）字面量 var arr = [1,2,3];
+(2）构造函数</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = new Array(3); 创建长度为3的数组
+var arr = new Array(&quot;aa&quot;,&quot;bb&quot;,&quot;cc&quot;);  创建数组及定义好每一项的值
+</code></pre></div><p>3.数组的操作(增删改查)</p> <p>数组的索引:arr[索引]，索引从0开始计数</p> <p>数组的长度:arr.length
+数组的遍历：遍历索引从0-arr.length-1，通过arr[索引]拿到每一项的值</p> <h2 id="方法"><a href="#方法" class="header-anchor">#</a> 方法</h2> <h3 id="_1-增删改"><a href="#_1-增删改" class="header-anchor">#</a> 1. 增删改</h3> <div class="language- extra-class"><pre class="language-text"><code>(1)增删改方法,改变原数组,返回值为长度或改变项
+	push() ： 往最后添加项
+	pop() ： 删除最后项
+	unshift() ： 往前添加项
+	shift() ： 删除最前项
+	splice(startIdx,num,item) : 增、删、换
+	reverse() : 数组倒序
+</code></pre></div><h3 id="_2-传递与复制"><a href="#_2-传递与复制" class="header-anchor">#</a> 2. 传递与复制</h3> <div class="language- extra-class"><pre class="language-text"><code>(2)传递、复制方法,不改变原数组
+	slice(startIdx,endIdx) : 截取数组
+	join('拼接符') ： 数组拼接为字符串,默认逗号拼接
+	concat(数组1,数组2,...) ： 合并数组,返回调用方法的新数组
+</code></pre></div><h2 id="数组的排序算法"><a href="#数组的排序算法" class="header-anchor">#</a> 数组的排序算法</h2> <h3 id="_1-冒泡排序"><a href="#_1-冒泡排序" class="header-anchor">#</a> 1.冒泡排序</h3> <p>​	外层遍历的是轮数
+​	内层是每一轮，遍历当前索引，与索引+1进行比较换位置。每一轮将一个最大的数排在最后</p> <div class="language- extra-class"><pre class="language-text"><code>var arr=[];
+		for(var i=0;i&lt;7;i++){
+			arr.push(parseInt(Math.random()*100));
+		}
+		console.log(arr);
+		for(var i=0;i&lt;arr.length-1;i++){
+			for(var j=0;j&lt;arr.length-i;j++){
+				if(arr[j]&gt;arr[j+1]){
+					var box=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=box;
+				}
+				console.log(666);
+			}
+		}
+		console.log(arr);
+</code></pre></div><h3 id="_2-选择排序"><a href="#_2-选择排序" class="header-anchor">#</a> 2.选择排序</h3> <ul><li><p>固定被比较的索引，与后面的每个索引对应的值进行比较</p></li> <li><p>外层循环是固定的被比较的索引i：0-arr.length-2</p></li> <li><p>内层循环是比较i的索引j，从i+1到arr.length进行遍历</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [12,3,44,343,55,1,23];
+for(var i=0;i&lt;arr.length-1;i++){
+	for(var j=i+1;j&lt;arr.length;j++){
+		if(arr[i]&gt;arr[j]){
+			var item = arr[i];
+			arr[i] = arr[j];
+			arr[j] = item;
+		}
+		console.log(666);
+	}
+}
+console.log(arr);
+</code></pre></div></li></ul> <h3 id="_3-快速排序"><a href="#_3-快速排序" class="header-anchor">#</a> 3.快速排序</h3> <p>（递归）</p> <div class="language- extra-class"><pre class="language-text"><code>var arr=[1,9,2,23,10,55,33];
+fastSort(arr);
+function fastSort(arr){
+	if(arr.length&lt;=1){
+		return arr;
+	}
+	var midIdx=parseInt(arr.length/2);
+	var midNum=arr.splice(midIdx,1)[0];
+	var ltArr=[];
+	var gtArr=[];
+	for(var i=0;i&lt;arr.length;i++){
+		if(arr[i]&lt;=midNum){
+			ltArr.push(arr[i]);
+		}else if(arr[i]&gt;midNum){
+			gtArr.push(arr[i]);
+		}
+	}
+	return fastSort(ltArr).concat([midNum],fastSort(gtArr));
+}
+console.log(fastSort(arr));
+</code></pre></div><h3 id="_4-sort-排序"><a href="#_4-sort-排序" class="header-anchor">#</a> 4.sort()排序</h3> <p>arr.sort() 将原数组中的元素排序，并返回排序后的数组</p> <ul><li><p>默认以字符串的排列方式（转换成ASCII码进行对比)</p></li> <li><p>sort(function(a,b){return a-b;}) 从小到大排序</p> <div class="language- extra-class"><pre><code> var res = arr.sort(function(a,b){
+ 	// return值&gt;0 a,b互换
+ 	// return值&lt;=0 不动
+ 	return a-b;
+ });
+ console.log(arr,res);
+</code></pre></div></li></ul> <h2 id="数组的传递与复制"><a href="#数组的传递与复制" class="header-anchor">#</a> 数组的传递与复制</h2> <h3 id="_1-传递"><a href="#_1-传递" class="header-anchor">#</a> 1.传递</h3> <ul><li>基本数据类型中，传递的是值(数字,字符串,布尔类型,null,undefined)</li> <li>引用数据类型中，传递的是在堆中的地址(数组,对象)</li></ul> <h3 id="_2-复制"><a href="#_2-复制" class="header-anchor">#</a> 2.复制</h3> <p>基本数据类型：改变复制的值，不影响原值</p> <div class="language- extra-class"><pre class="language-text"><code>var a = 10;
+var b = a;//var b = 10
+b = 30;
+console.log(a,b);//10,30
+</code></pre></div><p>引用数据类型：改变复制的值，会影响原值（浅复制）</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [10,20,30];
+var brr = arr;
+brr[0] = 66;
+console.log(arr,brr);//[66,20,30][66,20,30]
+</code></pre></div><p>引用数据类型：改变复制的值，不影响原值（深复制）</p> <ul><li>for循环拷贝数组的每一项(不适用多维数组)</li> <li>slice(0)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr = [10,20,30];
+// var res = [];
+// for(var i=0;i&lt;arr.length;i++){
+// 	res.push(arr[i]);
+// }
+// console.log(res);//10,20,30
+// res[0] = 40;
+// console.log(arr,res);
+//=======================================
+var res = arr.slice(0);
+res[0] = 40;
+console.log(arr,res);
+</code></pre></div><h2 id="多维数组"><a href="#多维数组" class="header-anchor">#</a> 多维数组</h2> <p>数组嵌套数组</p> <div class="language- extra-class"><pre class="language-text"><code>// var arr = [[&quot;hzh&quot;,&quot;hyd&quot;],[&quot;lm&quot;,&quot;jh&quot;],[&quot;xw&quot;,&quot;rw&quot;],[&quot;lz&quot;,&quot;zlh&quot;],[&quot;hhm&quot;,&quot;dz&quot;]];
+var arr = [];
+var brr = [];
+var n = 0;
+for(var i=1;i&lt;=25;i++){
+	brr.push(i);
+	n++;
+	if(n % 5==0){
+		arr.push(brr);
+		brr = [];
+	}
+}
+console.log(arr);
+</code></pre></div><h1 id="三、对象"><a href="#三、对象" class="header-anchor">#</a> 三、对象</h1> <h2 id="创建对象"><a href="#创建对象" class="header-anchor">#</a> 创建对象</h2> <p>1.字面量</p> <div class="language- extra-class"><pre class="language-text"><code>var obj = {
+	name : &quot;xiaofang&quot;,
+	age : 17,
+	hobby : &quot;学习&quot;
+}
+</code></pre></div><p>2.构造函数</p> <div class="language- extra-class"><pre class="language-text"><code>var obj1 = new Object();
+</code></pre></div><h2 id="对象的操作"><a href="#对象的操作" class="header-anchor">#</a> 对象的操作</h2> <p>操作对象键对应的值</p> <p>obj.键</p> <p>obj[&quot;具题的键&quot;] obj[变量]
+对象的遍历</p> <div class="language- extra-class"><pre class="language-text"><code> for(var key in obj){
+	key代表键;
+	obj[key]获取每个键对应的值
+}
+</code></pre></div><p>对于单个键值对而言，键是变量，值就是值</p> <p>对于整个对象而言，对象是变量，键是具体的属性</p> <h3 id="_1-添加、修改属性"><a href="#_1-添加、修改属性" class="header-anchor">#</a> (1)添加、修改属性</h3> <div class="language- extra-class"><pre class="language-text"><code>obj.sex = '男';
+obj['weight'] = 60；
+</code></pre></div><h3 id="_2-删除属性"><a href="#_2-删除属性" class="header-anchor">#</a> (2)删除属性</h3> <div class="language- extra-class"><pre class="language-text"><code>var obj = {name:'laoxie',age:18,gender:'man'}
+//删除age属性
+delete obj.age;
+</code></pre></div><h3 id="_3-读取属性值"><a href="#_3-读取属性值" class="header-anchor">#</a> (3)读取属性值</h3> <div class="language- extra-class"><pre class="language-text"><code>obj.name;//==&gt;小明
+//如果读取一个不存在的属性，返回undefined
+</code></pre></div><h3 id="_4-遍历对象for…in"><a href="#_4-遍历对象for…in" class="header-anchor">#</a> (4)遍历对象for…in</h3> <div class="language- extra-class"><pre class="language-text"><code>    var obj = {name:'laoxie'，age:18，gender:'男'}；  
+    for(var key in obj){
+        //遍历obj对象里面所有的键key,Obj[key]操作所有键对应的值。
+        document.write(obj[key]);//分别输出：'laoxie',18,'男'
+    }
+</code></pre></div><h3 id="数组与对象的组合"><a href="#数组与对象的组合" class="header-anchor">#</a> 数组与对象的组合</h3> <div class="language- extra-class"><pre class="language-text"><code> [{
+        id:'001',
+        name:'iphone7 plugs',
+        nickname:'肾7',
+        imgurl:'img/ip7.jpg',
+        price:5899.00,
+        sale:5888.00,
+        color:'土豪金'
+    },{
+        id:'002',
+        name:'Note7',
+        nickname:'爆炸7',
+        imgurl:'img/note7.jpg',
+        price:3899.00,
+        sale:998.00,
+        color:'黑色'
+    },{
+        id:'003',
+        name:'荣耀7',
+        nickname:'牛x7',
+        imgurl:'img/honor7.jpg',
+        price:1999.00,
+        sale:1899.00,
+        color:'白色'
+    }]
+</code></pre></div><h1 id="四、es5数组新增方法"><a href="#四、es5数组新增方法" class="header-anchor">#</a> 四、ES5数组新增方法</h1> <h2 id="迭代（遍历）方法"><a href="#迭代（遍历）方法" class="header-anchor">#</a> 迭代（遍历）方法</h2> <h3 id="_1-foreach"><a href="#_1-foreach" class="header-anchor">#</a> 1. forEach()</h3> <p>forEach(function(item,idx,arr){})  遍历数组，与for循环没有太大差别，比for循环方便</p> <ul><li>item代表数组中的每一项</li> <li>idx代表索引</li> <li>arr代表当前数组</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr = [777,10,44,66];
+for(var i=0;i&lt;arr.length;i++){
+	console.log(arr[i]);
+}
+arr.forEach(function(item,idx,arr){
+	console.log(item,idx,arr);
+})
+</code></pre></div><h3 id="_2-map"><a href="#_2-map" class="header-anchor">#</a> 2.map()</h3> <p>map(function(item,idx,arr){return ;})  返回一个数量相等的数组，内容是什么取决于在fn中的返回值</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [777,10,44,66];
+var res = arr.map(function(item,idx,arr){
+			console.log(item);
+			return item*2;
+		})
+		console.log(res);
+</code></pre></div><h3 id="_3-filter"><a href="#_3-filter" class="header-anchor">#</a> 3.filter()</h3> <p>filter(function(item,idx,arr){}) 返回一个数组，存放执行fn后返回true的数组元素(过滤)</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [777,10,44,66];
+var res = arr.filter(function(item,idx,arr){
+			return item&gt;55;
+		})
+		console.log(res);
+</code></pre></div><h3 id="_4-some"><a href="#_4-some" class="header-anchor">#</a> 4.some()</h3> <p>some(function(item,idx,arr){}) 返回布尔值，如果fn对数组任何一项返回 true，则返回true。</p> <p>查找数组中是否有满足条件的项。</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [777,10,44,66];
+var res = arr.some(function(item,idx,arr){
+			console.log(idx);//0
+			return item&gt;666;//777&gt;666直到找到true就不再遍历
+		})
+</code></pre></div><h3 id="_5-every"><a href="#_5-every" class="header-anchor">#</a> 5.every()</h3> <p>every(function(item,idx,arr){}) 返回布尔值，若fn对数组中有一项返回false，则返回false</p> <p>检查数组所有项，是否都满足条件，是则返回true，否则返回false。</p> <div class="language- extra-class"><pre class="language-text"><code>var arr = [777,10,44,66];
+var res = arr.every(function(item,idx,arr){
+			return item&gt;666;
+		})
+		console.log(res);
+</code></pre></div><h2 id="归并方法"><a href="#归并方法" class="header-anchor">#</a> 归并方法</h2> <h3 id="reduce-fn-initval"><a href="#reduce-fn-initval" class="header-anchor">#</a> reduce(fn,initVal)</h3> <p>fn(prev,current,idx,arr)</p> <ul><li>prev: fn上一次执行的返回值，第一次为initVal，若initVal没有定义，为数组的第一个元素值</li> <li>current: 当前索引对应的值</li> <li>idx: 当前索引</li> <li>arr: 数组</li></ul> <p>应用： 数组求和</p> <div class="language- extra-class"><pre class="language-text"><code>//对数组求和
+var res = arr.reduce(function(prev,current,idx,arr){
+	return prev+current;
+},0);
+</code></pre></div><h3 id="reduceright-fn-initval"><a href="#reduceright-fn-initval" class="header-anchor">#</a> reduceRight(fn,initVal)</h3> <ul><li>fn(prev,cur,index,array): fn是每一项调用的函数，函数接受4个参数分别是
+<ul><li>prev：函数上一次的返回值。（第一次的值参考initVal）</li> <li>cur：当前值，</li> <li>index：索引值，</li> <li>array：当前数组，</li></ul></li> <li>函数需要返回一个值，这个值会在下一次迭代中作为prev的值</li> <li>initVal: 迭代初始值（可省略），如果缺省，prev的值为数组第一项</li></ul> <h2 id="静态方法"><a href="#静态方法" class="header-anchor">#</a> 静态方法</h2> <p>只能由构造函数自己去调用</p> <h3 id="array-isarray"><a href="#array-isarray" class="header-anchor">#</a> Array.isArray()</h3> <p>Array.isArray() 判断是否为数组，返回布尔值</p> <h2 id="索引方法"><a href="#索引方法" class="header-anchor">#</a> 索引方法</h2> <h3 id="indexof-lastindexof-a-3"><a href="#indexof-lastindexof-a-3" class="header-anchor">#</a> indexOf/lastIndexOf(&quot;a&quot;,3)</h3> <p>indexOf(keyword[,startIdx]) 返回keyword所在数组中的索引值；</p> <ul><li><p>如果数组不存在keyword，则返回-1</p></li> <li><p>startIdx 规定开始查找的索引值</p></li> <li><p>应用：判断数组中是否存在某个值</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr=[10,20,50,40,50]
+console.log(arr.indexOf(50))
+//2
+console.log(arr.indexOf(50,3))
+//4
+</code></pre></div><h1 id="五、字符串"><a href="#五、字符串" class="header-anchor">#</a> 五、字符串</h1> <p>1.定义：字符串就是一串字符，由双（单）引号括起来</p> <p>2.创建字符串</p> <p>​	字面量 var str=&quot;hello&quot;</p> <p>​	构造函数 var str=new String(&quot;hello&quot;);</p> <p>3.字符串的操作</p> <p>​	字符串的长度 str.length</p> <p>​	字符串的索引 str[索引]   ==&gt;es5</p> <p>​	str.charAt(索引)</p> <p>4.字符串的方法</p> <p>（1）split(分隔符)，将字符串根据分隔符，拆分成数组。原字符串不变</p> <p>（2）replace(需要被替换的字符，替换后的字符)，字符串的替换方法。原字符串不变</p> <p>（3）slice(start[,end])字符串的截取方法，截取start到end，不包括end的字符串，支持负数</p> <p>substring(start[,end]) 与slice 一样，但不支持负数</p> <p>substr(start[,len]) 支持负数，len为截取的数量</p> <p>（4）字符串大小写转换</p> <p>toLowerCase()  转换成小写</p> <p>toUpperCase()  转换成大写</p> <p>（5）trim() 删除前后所有空格，返回新的字符串(es5)</p> <p>5.字符与字符编码</p> <h1 id="六、正则表达式"><a href="#六、正则表达式" class="header-anchor">#</a> 六、正则表达式</h1> <p>1.字面量创建</p> <p>/字符串/</p> <p>例如：var reg = /傻逼/</p> <p>​	g 全局匹配</p> <p>​	i 不区分大小写</p> <p>2.构造函数创建</p> <p>​	new RegExp(&quot;字符串&quot;,&quot;gi&quot;)</p> <p>​	new RegExp(变量,&quot;gi&quot;)</p> <h1 id="七、math"><a href="#七、math" class="header-anchor">#</a> 七、Math</h1> <p>1.概念：一个保存数学公式和信息的对象</p> <p>2.属性：</p> <p>Math.PI		π  3.1415926....</p> <p>3.方法：</p> <p>Math.random()  //返回0-1之间的随机数（不包括1）</p> <p>Math.round()  //四舍五入</p> <p>Math.ceil()  //向上取整</p> <p>Math.floor()  //向下取整</p> <p>Math.max(num1,num2,...) //最大的数</p> <p>Math.min(num1,num2,...) //最小的数</p> <p>Math.abs() //绝对值</p> <p>Math.pow(x,y)  //x的y次方</p> <h1 id="八、date"><a href="#八、date" class="header-anchor">#</a> 八、Date</h1> <h2 id="创建日期时间对象"><a href="#创建日期时间对象" class="header-anchor">#</a> 创建日期时间对象</h2> <p>构造函数 new Date();</p> <p>不带参数，得到的是代码执行时的时间（本地时间）</p> <p>带参数：字符串，指定日期；数字，指定毫秒数（距离纪元时间的毫秒数）。</p> <div class="language- extra-class"><pre class="language-text"><code>var d=new Date();//代码运行时的本地时间
+var d=new Date(&quot;2017/10/10 12:00:00&quot;);
+var d=new Date(2000); //距离纪元时间的毫秒数
+</code></pre></div><h2 id="时间日期对象的方法"><a href="#时间日期对象的方法" class="header-anchor">#</a> 时间日期对象的方法</h2> <p>1.获取方法</p> <p>获取年月日</p> <div class="language- extra-class"><pre class="language-text"><code>var d=new Date();
+var year=d.getFullYear();//2019
+var month=d.getMonth(); //月份0-11，得到的月份记得+1才是真实月份;
+var date=d.getDate()
+</code></pre></div><p>获取星期</p> <div class="language- extra-class"><pre class="language-text"><code>var d=new Date();
+var day=d.getDay();  //0-6:星期天-星期六
+</code></pre></div><p>获取时分秒</p> <div class="language- extra-class"><pre class="language-text"><code>var d=new Date();
+var hour=d.getHours();
+var minute=d.getMinutes();
+var second=d.getSeconds();
+</code></pre></div><p>date.getTime();获取距离纪元时间的毫秒数</p> <h2 id="静态方法-2"><a href="#静态方法-2" class="header-anchor">#</a> 静态方法</h2> <p>Date.parse(“2015-08-24”)//返回指定日期距1970-1-1零时的毫秒数</p> <blockquote><p>PS：转换格式默认支持2015-08-24或2015/08/24</p></blockquote> <p>Date.now();//返回执行这行代码时距1970-1-1零时的毫秒数</p> <h2 id="定时器"><a href="#定时器" class="header-anchor">#</a> 定时器</h2> <p>1.var timer=setInterval(function(){},毫秒数)；每隔多少毫秒执行一次函数</p> <p>2.setTimeout(function(){},毫秒数)；延迟多少毫秒执行函数，只执行一次</p> <p>3.clearInterval(timer)；清除指定id标识的定时器操作</p> <p>4.clearTimeout(timer)；清除指定id标识的延迟操作</p> <h1 id="九、bom"><a href="#九、bom" class="header-anchor">#</a> 九、BOM</h1> <h2 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h2> <p>BOM 是Browser Object Model（浏览器对象模型）的缩写，提供与浏览器窗口进行交互的对象。JavaScript语法的标准化组织是ECMA，DOM的标准化组织是W3C, 而BOM缺乏标准。这也是各种浏览器不兼容的根源所在；</p> <p>1.window对象</p> <p>window对象是BOM的核心, 是最顶层的对象，所有对象都是通过它延伸出来的</p> <p>2.全局作用域下定义的变量都是window对象的属性；</p> <p>尽量避免声明全局变量，减少命名冲突，避免全局污染；</p> <p>在函数内部不用var声明的变量会成为全局变量，即window对象的属性</p> <p>window对象可以在代码中省略，如window.alert()可以写成alert();</p> <p>delete不能删除全局变量；</p> <div class="language- extra-class"><pre class="language-text"><code>var obj = {name:'xxx'}
+
+//删除对象的属性用delete：
+delete obj.name;
+</code></pre></div><h2 id="window对象下的属性"><a href="#window对象下的属性" class="header-anchor">#</a> window对象下的属性</h2> <p>1.浏览器窗口尺寸</p> <p>innerWidth/innerHeight, //表示浏览器窗口”可视区域”尺寸</p> <p>outerWidth/outerHeight //表示整个浏览器窗口的尺寸</p> <p>2.滚动相关</p> <ul><li>scrollX/scrollY //获取浏览器窗口滚动条滚动过的距离</li> <li>scrollTo(x,y) //设置浏览器滚动距离</li> <li>scrollBy(xnum,ynum) //设置基于当前位置滚动的距离，可以为负数</li></ul> <h2 id="window的常用事件"><a href="#window的常用事件" class="header-anchor">#</a> window的常用事件</h2> <ul><li>onload //页面资源全部加载完成后触发这个事件（开发中不常用）（document.addEventListener(&quot;DOMContentLoaded&quot;,function(){})）</li> <li>onscroll//窗口滚动条滚动时触发</li> <li>onresize //窗口大小改变时触发</li></ul> <h2 id="系统弹窗"><a href="#系统弹窗" class="header-anchor">#</a> 系统弹窗</h2> <h3 id="_1-alert-msg"><a href="#_1-alert-msg" class="header-anchor">#</a> 1.alert(msg)</h3> <p>//弹出对话框</p> <h3 id="_2-confirm-msg"><a href="#_2-confirm-msg" class="header-anchor">#</a> 2.confirm(msg)</h3> <p>//弹出警告弹窗，返回布尔值</p> <h3 id="_3-prompt-msg-default"><a href="#_3-prompt-msg-default" class="header-anchor">#</a> 3.prompt(msg,default)</h3> <p>//弹出输入框，返回消息或null</p> <p>以上三个方法都会暂停代码的执行</p> <h3 id="_4-open-url-name-options"><a href="#_4-open-url-name-options" class="header-anchor">#</a> 4.open(url,name,[options])</h3> <p>打开一个新窗口并返回新 window 对象</p> <p>name:不命名会每次打开新窗口，命名的第一次打开新窗口,之后在这个窗口中加载</p> <p>options为字符串：width=400,height=400,top=200,left=200'</p> <p>opener父窗口对象，通过open方法打开的窗口才有opener对象</p> <h3 id="_5-close"><a href="#_5-close" class="header-anchor">#</a> 5.close():</h3> <p>关闭窗口</p> <h3 id="_6-print"><a href="#_6-print" class="header-anchor">#</a> 6.print():</h3> <p>调出打印对话框</p> <h2 id="属性对象-location"><a href="#属性对象-location" class="header-anchor">#</a> 属性对象 location</h2> <p>location是BOM最有用的对象之一，保存着当前窗口中加载文档的相关信息，还提供一些导航功能，它是个很特别的对象，既是window的属性，也是document的属性</p> <div class="language- extra-class"><pre class="language-text"><code>var src=https://www.baidu.com/s?wd=yangmi
+location.href='整个网址/src'
+location.hash='#后面的字符'
+location.search='?wd=yangmi'
+</code></pre></div><h1 id="十、dom"><a href="#十、dom" class="header-anchor">#</a> 十、DOM</h1> <h2 id="概念-2"><a href="#概念-2" class="header-anchor">#</a> 概念</h2> <p>DOM是Document Object Model（文档对象模型）的缩写，它是W3C国际组织的一套Web标准。是针对HTML和XML文档的一个API，它定义了访问HTML文档对象的一套属性、方法和事件。</p> <p>1.节点</p> <p>元素节点</p> <p>属性节点</p> <p>文本节点</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;box&quot; class=&quot;bb&quot;&gt;bilibili&lt;/div&gt;//此处4个节点，1元素，2属性，1文本
+</code></pre></div><h2 id="获取元素节点"><a href="#获取元素节点" class="header-anchor">#</a> 获取元素节点</h2> <h3 id="_1-通过id名"><a href="#_1-通过id名" class="header-anchor">#</a> 1.通过id名</h3> <p>document.getElementById(&quot;id名&quot;)</p> <ul><li>通过 ID获取元素的节点（速度最快）</li> <li>必须通过document调用</li> <li>返回DOM节点对象，如果id不存在返回null</li></ul> <h3 id="_2-通过类名"><a href="#_2-通过类名" class="header-anchor">#</a> 2.通过类名</h3> <p>getElementsByClassName(&quot;类名&quot;); //通过类名获取；可以通过其他元素节点获取</p> <ul><li>通过class类名获取节点列表</li> <li>返回类数组，如果类名不存在返回空数组[]</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var box=document.getElementById(&quot;box&quot;);
+var bb=box.getElementsByClassName(&quot;bb&quot;);
+</code></pre></div><h3 id="_3-通过标签名"><a href="#_3-通过标签名" class="header-anchor">#</a> 3.通过标签名</h3> <p>getElementByTagName(&quot;标签名&quot;)；</p> <ul><li>通过标签名获取元素节点列表</li> <li>返回类数组，如果tagname不存在返回空数组[]</li></ul> <h3 id="_4-通过name属性"><a href="#_4-通过name属性" class="header-anchor">#</a> 4.通过name属性</h3> <p>document.getElementsByName()</p> <ul><li>通过name属性获取元素节点列表</li> <li>必须通过document调用</li> <li>返回类数组，如果name属性不存在返回空数组[]</li></ul> <p>注意: 如果确认元素存在, 但是返回null或[]，一定是代码执行顺序的问题</p> <h3 id="_5-利用节点关系，"><a href="#_5-利用节点关系，" class="header-anchor">#</a> 5.利用节点关系，</h3> <p>获取其他节点（包含文本节点）</p> <h4 id="获取父级节点"><a href="#获取父级节点" class="header-anchor">#</a> 获取父级节点</h4> <p>ele.parentNode  //得到节点的父节点</p> <h4 id="获取子节点"><a href="#获取子节点" class="header-anchor">#</a> 获取子节点</h4> <p>ele.childNodes  //得到ele元素的全部子节点列表（类数组）</p> <p>ele.firstChild  //获得ele元素的第一个子节点</p> <p>ele.lastChild  //获得ele元素的最后一个子节点</p> <h4 id="获取兄弟节点"><a href="#获取兄弟节点" class="header-anchor">#</a> 获取兄弟节点</h4> <p>ele.nextSibling  //获得ele元素的下一个兄弟节点</p> <p>ele.previousSibling  //获得ele元素的上一个兄弟节点</p> <h3 id="_6-节点的三个属性"><a href="#_6-节点的三个属性" class="header-anchor">#</a> 6.节点的三个属性</h3> <table><thead><tr><th style="text-align:center;"></th> <th style="text-align:center;">nodeType</th> <th style="text-align:center;">nodeName</th> <th style="text-align:center;">nodeValue</th></tr></thead> <tbody><tr><td style="text-align:center;">1.元素节点</td> <td style="text-align:center;">1</td> <td style="text-align:center;">标签名大写</td> <td style="text-align:center;">null</td></tr> <tr><td style="text-align:center;">2.属性节点</td> <td style="text-align:center;">2</td> <td style="text-align:center;">属性名</td> <td style="text-align:center;">属性值</td></tr> <tr><td style="text-align:center;">3.文本节点</td> <td style="text-align:center;">3</td> <td style="text-align:center;">#text</td> <td style="text-align:center;">文本内容</td></tr></tbody></table> <h3 id="_7-利用元素节点关系"><a href="#_7-利用元素节点关系" class="header-anchor">#</a> 7.利用元素节点关系</h3> <h4 id="获取父级节点元素"><a href="#获取父级节点元素" class="header-anchor">#</a> 获取父级节点元素</h4> <p>parentElement</p> <h4 id="获取子级元素节点"><a href="#获取子级元素节点" class="header-anchor">#</a> 获取子级元素节点</h4> <p>children获取元素的全部子元素</p> <p>firstElementChild获取第一个子元素</p> <p>lastElementChild获取最后一个子元素</p> <h4 id="获取兄弟元素节点"><a href="#获取兄弟元素节点" class="header-anchor">#</a> 获取兄弟元素节点</h4> <p>nextElementSibling 获取下一个元素</p> <p>previousElementSibling 获取上一个元素</p> <h3 id="_8-节点的创建与插入方法"><a href="#_8-节点的创建与插入方法" class="header-anchor">#</a> 8.节点的创建与插入方法</h3> <p>创建：</p> <ul><li>document.createElement() 创建一个元素节点</li> <li>document.createTextNode() 创建一个文本节点</li> <li>document.createAttribute() 创建一个属性节点（了解）</li></ul> <p>插入：</p> <ul><li>parent.appendChild()  向节点的子节点列表的结尾添加新的子节点</li> <li>parent.insertBefore(new,node)  在指定的子节点node前插入新的子节点new。</li> <li>ele.setAttributeNode(attrNode) 在指定元素中插入一个属性节点（了解）</li></ul> <p>对页面已存在节点的处理</p> <p>复制</p> <ul><li>cloneNode(boolean)  复制节点，为true是深复制。</li></ul> <p>删除：</p> <ul><li>parent.removeChild(ele)  删除（并返回）当前节点parent的指定子节点ele。</li></ul> <p>判断：</p> <ul><li>parent.hasChildNodes() 判断当前节点是否拥有子节点,返回布尔值</li></ul> <h2 id="元素节点（对象）的属性及方法"><a href="#元素节点（对象）的属性及方法" class="header-anchor">#</a> 元素节点（对象）的属性及方法</h2> <h3 id="_1-常用属性"><a href="#_1-常用属性" class="header-anchor">#</a> 1.常用属性</h3> <p>可以通过点语法或方括号访问</p> <ul><li>tagName 获取元素元素的标签名</li> <li>id 设置/获取元素id属性</li> <li>name 设置/获取元素name属性</li> <li>style 设置/获取元素的内联样式</li> <li>className 设置/获取元素的class属性</li> <li>innerHTML 设置/获取元素的内容（包含html代码）</li> <li>outerHTML 设置或获取元素及其内容（包含html代码）</li> <li>innerText 设置或获取位于元素标签内的文本</li> <li>outerText 设置(包括标签)或获取(不包括标签)元素的文本</li></ul> <h3 id="_2-元素方法（修改html属性）"><a href="#_2-元素方法（修改html属性）" class="header-anchor">#</a> 2.元素方法（修改html属性）</h3> <ul><li>ele.getAttribute(attr) //获取元素的属性值（自定义属性获取）</li> <li>ele.setAttribute(attr,val); //设置元素的属性</li> <li>ele.removeAttribute(attr) //删除属性attr</li> <li>ele.hasAttribute(attr) //判断是否存在属性attr</li></ul> <h3 id="_3-盒模型相关"><a href="#_3-盒模型相关" class="header-anchor">#</a> 3.盒模型相关</h3> <div class="language- extra-class"><pre class="language-text"><code>offsetTop: 当前元素离&lt;定位父级&gt;元素顶部的距离。
+offsetLeft: 当前元素离&lt;定位父级&gt;元素左边的距离。
+	以上两个属性如果没定位的父级，则相对于根元素html的距离
+offsetWidth: 当前元素的宽度（border + padding + content）
+offsetHeight: 当前元素的高度（border + padding + content）
+</code></pre></div><h2 id="table对象-了解"><a href="#table对象-了解" class="header-anchor">#</a> table对象(了解)</h2> <h3 id="_1-table对象属性-方法"><a href="#_1-table对象属性-方法" class="header-anchor">#</a> 1. table对象属性&amp;方法</h3> <ul><li>rows 返回包含表格中所有行的一个数组</li> <li>tBodies 返回包含表格中所有 tbody 的一个数组</li> <li>insertRow(index) 在表格中插入一个新行。</li> <li>deleteRow(index) 从表格删除一行。</li></ul> <h3 id="_2-tr对象属性-方法"><a href="#_2-tr对象属性-方法" class="header-anchor">#</a> 2. tr对象属性&amp;方法</h3> <ul><li>cells 返回包含表格中所有单元格的一个数组</li> <li>rowIndex 返回该行在表中的位置</li> <li>sectionRowIndex 返回在 tBody 、tHead 或 tFoot 中行的位置。</li> <li>insertCell(index) 在一行中的指定位置插入一个空的列</li> <li>deleteCell(index) 删除行中的指定的单元格</li></ul> <h3 id="_3-td-th对象属性-方法"><a href="#_3-td-th对象属性-方法" class="header-anchor">#</a> 3. td/th对象属性&amp;方法</h3> <ul><li>cellIndex 返回单元格在表格行的单元格集合中的位置。</li></ul> <h1 id="十一、事件"><a href="#十一、事件" class="header-anchor">#</a> 十一、事件</h1> <h2 id="鼠标事件"><a href="#鼠标事件" class="header-anchor">#</a> 鼠标事件</h2> <p>onclick当用户点击某个对象时调用的事件。</p> <p>ondblclick当用户双击某个对象时调用的事件。</p> <p>onmousedown鼠标按钮被按下。</p> <p>onmouseup鼠标按键被松开。</p> <p>onmouseover 鼠标移到某元素之上。</p> <p>onmouseout 鼠标从某元素移开。</p> <p>onmousemove鼠标被移动时触发。</p> <p>onmouseenter在鼠标光标从元素外部移动到元素范围之内时触发。这个事件不冒泡</p> <p>onmouseleave在位于元素上方的鼠标光标移动到元素范围之外时触发。这个事件不冒泡</p> <p>oncontextmenu 鼠标右键菜单展开时触发</p> <p>PS：click = mousedown + mouseup, dblclick = click*2(短时间内两次单击);
+执行顺序：mouseover=&gt;mouseenter; mouseout =&gt; mouseleave</p> <h2 id="事件对象"><a href="#事件对象" class="header-anchor">#</a> 事件对象</h2> <p>事件执行过程中的状态，用来保存当前事件的信息的对象</p> <div class="language- extra-class"><pre class="language-text"><code>ele.事件 = function(e){
+	e = e || window.event;//获取event对象的兼容写法。IE8-：window.event
+}
+</code></pre></div><p>兼容性代码：e=e||window.event</p> <p>//标准浏览器：e</p> <p>//ie8：false ||window.event ==&gt;window.event</p> <h3 id="_1-事件对象的属性（与鼠标相关）"><a href="#_1-事件对象的属性（与鼠标相关）" class="header-anchor">#</a> 1.事件对象的属性（与鼠标相关）</h3> <p>e.button</p> <p>当事件被触发时，返回哪个鼠标按钮被点击</p> <p>W3C标准：0代表鼠标按下左键；1代表按下了滚轮；2代表按下了右键；</p> <p>IE8：1鼠标左键，2鼠标右键，3左右同时按，4滚轮，5左键加滚轮，6右键加滚轮，7三个同时；</p> <h3 id="_2-光标位置信息"><a href="#_2-光标位置信息" class="header-anchor">#</a> 2.光标位置信息</h3> <div class="language- extra-class"><pre class="language-text"><code>e.clientX /e.clientY 光标相对于浏览器可视区域的位置，也就是浏览器坐标。
+e.screenX/e.screenY 光标指针相对于电脑屏幕的水平/垂直坐标。
+e.pageX/e.pageY:鼠标相对于文档的位置。
+	* 包括滚动条滚动的距离，即：e.clientX+window.scrollX
+	* IE8-不支持
+	e.offsetX,e.offsetY: 光标相对于事件源对象的相对偏移量。
+	* 事件源对象：触发事件的对象
+</code></pre></div><h2 id="键盘事件"><a href="#键盘事件" class="header-anchor">#</a> 键盘事件</h2> <p>onkeydown 某个键盘按键被按下。
+onkeyup 某个键盘按键被松开。
+onkeypress 键盘&lt;字符键&gt;被按下触发,而且如果按住不放的话，会重复触发此事件。</p> <p>1.事件 对象的属性（与键盘相关）</p> <p>（1）which/keyCode</p> <p>对于keypress事件，该属性声明了被敲击的键生成的 Unicode 字符码(ascii码)</p> <p>对于keydown和keyup事件，它指定了被敲击的键的虚拟键盘码。虚拟键盘码可能和使用的键盘的布局相关。</p> <p>兼容代码：e.which=e.which||e.keyCode</p> <p>（2）altKey 当事件被触发时，ALT键是否被按下，返回值为布尔值</p> <p>（3）ctrlKey 当事件被触发时CTRL键是否被按下</p> <p>（4）shiftKey 当事件被触发时，Shift键是否被按下；</p> <h2 id="阻止浏览器的默认行为"><a href="#阻止浏览器的默认行为" class="header-anchor">#</a> 阻止浏览器的默认行为</h2> <p>1.阻止右键鼠标的默认行为</p> <p>oncontextmenu</p> <p>2.文本的选择</p> <p>3.表单的提交</p> <p>4.链接的跳转</p> <p>标准： event.preventDefault();</p> <p>IE8-: event.returnValue=false;</p> <p>兼容：event.preventDefault? event.preventDefault():event.returnValue=false</p> <div class="language- extra-class"><pre class="language-text"><code>		//1.全局阻止
+		// document.oncontextmenu=function(e){
+		// 	e.preventDefault();
+		// }
+		//2.元素内阻止
+		// var box=document.getElementById('box');
+		// box.oncontextmenu=function(e){
+		// 	e.preventDefault();
+		// }
+</code></pre></div><h2 id="事件冒泡"><a href="#事件冒泡" class="header-anchor">#</a> 事件冒泡</h2> <h3 id="什么是事件冒泡："><a href="#什么是事件冒泡：" class="header-anchor">#</a> 什么是事件冒泡：</h3> <blockquote><p>在一个对象上触发某类事件（如onclick事件），那么click事件就会沿着DOM树向这个对象的父级传播，从里到外，直至它被处理程序处理，或者事件到达了最顶层（document/window）</p></blockquote> <h4 id="演示：从里到外的元素添加相同的事件，查看事件冒泡"><a href="#演示：从里到外的元素添加相同的事件，查看事件冒泡" class="header-anchor">#</a> 演示：从里到外的元素添加相同的事件，查看事件冒泡</h4> <p>1）不是所有的事件都能冒泡。</p> <p>​	以下事件不冒泡：blur、focus、load、unload…。</p> <p>​	【onmouseover与onmouseenter的区别】</p> <p>2）冒泡到最顶层的目标不同。大部分浏览器到window对象，IE8-到document对象</p> <h3 id="停止事件的传播"><a href="#停止事件的传播" class="header-anchor">#</a> 停止事件的传播</h3> <p>兼容：e.stopPropagation?e.stopPropagation():e.cancelBubble = true;</p> <div class="language- extra-class"><pre class="language-text"><code> 标准：event.stopPropagation(); 
+ IE8-：event.cancelBubble = true; 
+ // 阻止事件冒泡兼容写法：
+ if(e.stopPropagation){
+ 	e.stopPropagation();
+ }else{
+	e.cancelBubble = true;
+ }
+</code></pre></div><h3 id="事件委托"><a href="#事件委托" class="header-anchor">#</a> 事件委托</h3> <p>​	利用事件冒泡原理，把本来绑定给某个元素的事件委托给它的父级（已经存在页面元素）处理。</p> <h4 id="事件源对象：触发事件的元素"><a href="#事件源对象：触发事件的元素" class="header-anchor">#</a> 事件源对象：触发事件的元素</h4> <p>标准：event.target
+IE8-：event.srcElement</p> <p>兼容：e.target=e.target || e.srcElement;</p> <h4 id="案例：表格删除当前行"><a href="#案例：表格删除当前行" class="header-anchor">#</a> 案例：表格删除当前行</h4> <div class="language- extra-class"><pre class="language-text"><code>//影响页面性能的三大操作：
+	//* 事件数量
+	//* dom节点操作次数
+	//* 请求次数
+output.onclick = function(e){	
+	//兼容性问题
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+    if(target.className === 'btnDel'){
+    	//this指的是谁?
+        var currentTr = target.parentNode.parentNode;
+        currentTr.parentNode.removeChild(currentTr);
+    }else if(target.className === 'btnCopy'){
+        var currentTr = target.parentNode.parentNode;
+        currentTr.parentNode.appendChild(currentTr.cloneNode(true));
+    }
+}
+</code></pre></div><h2 id="事件捕获"><a href="#事件捕获" class="header-anchor">#</a> 事件捕获</h2> <p>从DOM树顶端到当前元素，执行事件。</p> <h2 id="绑定事件的方式"><a href="#绑定事件的方式" class="header-anchor">#</a> 绑定事件的方式</h2> <div class="language- extra-class"><pre class="language-text"><code>//（1）作为html属性
+//		&lt;div onclick=&quot;sum()&quot;&gt;&lt;/div&gt; 不常用，不实用。
+//（2）DOM节点绑定
+//		*同一元素的同名事件会被覆盖
+//  	*事件处理函数只能冒泡阶段执行
+//		div.onclick = function(){}
+//（3）事件监听器
+//		addEventListener(事件,function(){}[,是否捕获])
+//		默认false冒泡不捕获，true捕获
+//		*同名事件不会被覆盖
+//  	*事件处理函数默认冒泡阶段执行
+</code></pre></div><h3 id="事件监听器"><a href="#事件监听器" class="header-anchor">#</a> 事件监听器</h3> <div class="language- extra-class"><pre class="language-text"><code>//标准浏览器：元素.addEventListener(事件名,事件处理函数,是否捕获（默认false，为冒泡）)
+target.addEventListener(&quot;click&quot;, fn, false);
+//IE8-：元素.attachEvent(on+事件名,事件处理函数)没有捕获阶段
+target.attachEvent(&quot;onclick&quot;,fun);
+</code></pre></div><ul><li>可以绑定多个处理函数在一个对象上, 执行顺序按照绑定的顺序来(标准)
+<ul><li>不同元素事件执行顺序跟html结构有关</li> <li>相同元素事件执行顺序跟绑定先后有关</li></ul></li> <li>可以绑定多个函数在一个对象上, 执行顺序按照绑定的反序（ie8-）</li></ul> <p>封装：绑定事件，兼容浏览器</p> <div class="language- extra-class"><pre class="language-text"><code>function bind(ele,type,handler,isCapture){
+	// 优先使用事件监听器
+	if(ele.addEventListerner){
+		// 标准浏览器
+		ele.addEventListerner(type,handler,isCapture);
+	}else if(ele.attachEvent){
+		// IE8-
+		ele.attachEvent('on' + type,handler);
+	}else{
+		// DOM节点绑定方式
+		ele['on' + type] = handler
+	}
+}
+</code></pre></div><h2 id="事件的移除"><a href="#事件的移除" class="header-anchor">#</a> 事件的移除</h2> <h3 id="dom绑定事件的移除"><a href="#dom绑定事件的移除" class="header-anchor">#</a> DOM绑定事件的移除</h3> <p>​	ele.on+事件 = null；</p> <h3 id="事件监听器移除"><a href="#事件监听器移除" class="header-anchor">#</a> 事件监听器移除</h3> <ul><li>标准：removeEventListener(type,fn, true)传入的参数fn要跟添加时一样(同一个函数)，否则不能移除事件</li> <li>IE8-：detachEvent('on'+type,fun)，传入的参数fun要跟添加时一样，否则不能移除事件</li></ul> <blockquote><p>注意：
+页面事件绑定数量越多，越影响性能（速度越慢）</p></blockquote> <h1 id="十二、正则表达式"><a href="#十二、正则表达式" class="header-anchor">#</a> 十二、正则表达式</h1> <h2 id="概念-3"><a href="#概念-3" class="header-anchor">#</a> 概念</h2> <p>正则表达式（regular expression）是一个描述字符模式的对象</p> <p>能够进行强大的“模式匹配”和“文本检索与替换”功能。前端往往有大量的表单数据校验的工作，采用正则表达式会使得数据校验的工作量大大减轻</p> <h2 id="创建正则表达式"><a href="#创建正则表达式" class="header-anchor">#</a> 创建正则表达式</h2> <p>1.字面量</p> <p>var reg=/字符串||匹配规则/gi;</p> <p>g全局匹配，i不区分大小写</p> <p>2.构造函数</p> <p>var reg=new RegExp(&quot;字符串||匹配规则&quot;,gi);</p> <h2 id="支持正则表达式的字符串方法"><a href="#支持正则表达式的字符串方法" class="header-anchor">#</a> 支持正则表达式的字符串方法</h2> <p>1.search()</p> <p>返回第一次匹配时所在的索引值，如果匹配不到则返回-1；</p> <p>2.match()</p> <p>默认匹配字符串，返回一个数组</p> <p>0：所匹配的字符</p> <p>index:匹配第一个字符所在的索引</p> <p>input:对字符串的引用</p> <p>全局匹配(g)，返回一个匹配所有字符串的数组，如果匹配不到则返回null</p> <p>3.replace()</p> <p>替换字符串</p> <h2 id="匹配规则"><a href="#匹配规则" class="header-anchor">#</a> 匹配规则</h2> <p>1.字符类（不说数量则默认只匹配一个）</p> <p>\d 数字</p> <p>\D非数字</p> <p>\w代表数字、字母、下划线</p> <p>\W非数字字母和下划线字符</p> <p>\s空格</p> <p>\S空格以外的字符</p> <p>.除换行以外的所有字符</p> <p>\b : 匹配一个单词边界，也就是指单词和空格间的位置</p> <p>\B : 匹配非单词边界。</p> <p>单词和数字会被认为没有边界</p> <p>PS:以上所有字符类都只是匹配“一个”字符</p> <p>2.特殊符号^ $ . * + ? = ! : | \ / () [] {}</p> <p>(1)表示数量：（默认遵循贪婪模式，越多越好）</p> <p>+匹配1个或多个字符{1,}</p> <p>*匹配0个字符以上{0,}</p> <p>?匹配0个或1个字符{0,1}</p> <p>{2,4}最少2个，最多4个；匹配到2~4个字符</p> <p>(2)[]代表任意“单个字符”，里面的内容表示“或”的关系</p> <p>-表示范围</p> <p>例如：console.log(str.match(/[a-z]+/g));</p> <p>^代表非</p> <p>():表示一个整体，普通括号(?😃</p> <div class="language- extra-class"><pre class="language-text"><code>var reg=/(?:\d{17}|\d{14})[\dx]/
+</code></pre></div><p>(): 表示分组（n是以最左边括号出现的顺序排列)</p> <ul><li><p>$1: 表示第一个分组</p></li> <li><p>$n: 表示第n个分组（不能写在正则表达式里）</p></li> <li><p>\n: 在正则分组后面使用，表示对第n个分组的引用(一定要写在正则表达式里)</p> <p>PS: 编写的正则分组数量越少越好</p></li></ul> <p>var str=&quot;张益达,李小璐,张非凡&quot;;</p> <p>|: 表示或者</p> <p>锚点定位</p> <ul><li>^: 表示以什么开头</li> <li>$: 表示以什么结尾</li></ul> <p>表示数量，对前一个字符计数，</p> <ul><li>*: 代表0个或0个以上 &lt;===&gt;{0,}</li> <li>+: 代表1个或1个以上 &lt;===&gt;{1,}</li> <li>?: 代表0个或1个 &lt;===&gt;{0,1}</li> <li>{}:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>\d{5}: 匹配5个数字
+\d{5,10}: 匹配5个到10个数字
+\d{5,}: 匹配5个或5个以上的数字
+</code></pre></div><p>非贪婪模式，在后面加问号</p> <p>/\d{5,10}?/g</p> <h1 id="十三、es5"><a href="#十三、es5" class="header-anchor">#</a> 十三、ES5</h1> <h2 id="支持es5的浏览器"><a href="#支持es5的浏览器" class="header-anchor">#</a> 支持ES5的浏览器</h2> <p>ie9+</p> <h2 id="页面加载事件"><a href="#页面加载事件" class="header-anchor">#</a> 页面加载事件</h2> <p>1、解析HTML结构</p> <p>2、加载外部脚本和样式表文件</p> <p>3、解析并执行脚本代码</p> <p>4、DOM树构建完成 //DOMContentLoaded</p> <p>5、加载图片等外部文件</p> <p>6、页面加载完毕 //window.onload</p> <div class="language- extra-class"><pre class="language-text"><code>* readystatechange事件（准备阶段状态改变，两个状态）
+    * interactive 	：DOM树完成执行
+    * complete		：类似window.onload,但比window.onload先执行
+* DOMContentLoaded事件
+	* DOM树完成执行
+    * 必须使用事件监听器绑定document事件
+PS:以上事件用以取代window.onload事件（实际开发不常用）
+
+</code></pre></div><h2 id="es5的严格模式"><a href="#es5的严格模式" class="header-anchor">#</a> ES5的严格模式</h2> <p>ie9不支持严格模式</p> <p>1、使用严格模式：在当前作用域的最前面&quot;use strict&quot;</p> <p>意义：增加JS语法的严谨性</p> <div class="language- extra-class"><pre class="language-text"><code>2、为什么要用严格模式
+* 消除javascript语法的一些不合理，不严谨的地方，减少一些怪异行为；
+* 消除代码运行的一些不安全之处，保证代码运行的安全；
+* 提高编译器效率，增加运行速度；
+* 为未来新版本的javascript做好铺垫；
+
+3、如何使用严格模式
+* 全局：针对整个js文件
+  将”use strict”放在js文件的第一行
+* 局部：针对单个函数
+  将”use strict”放在函数体的第一行
+	function strict(){
+    	&quot;use strict&quot;;
+   		 return &quot;这是严格模式&quot;;
+	}
+	
+4、执行严格模式后的一些限制
+* 不使用var声明变量严格模式中将不通过
+* 删除系统内置的属性会报错 
+* 不能删除var声明的全局变量（会自动成为window的属性）
+* 对象有重名的属性将报错
+  * var obj={name:&quot;小王&quot;,name:'王大锤'}
+* 函数有重名的形参将报错
+  * function sum(a,a,b){}
+* arguments严格定义为参数，保存实参信息
+  * 不允许对arguments赋值
+  * 禁止使用arguments.callee（相当于递归）
+* 函数必须声明在顶层，不能写在条件判断语句或for循环语句中
+  var arr = [10,2,3,50];
+  if(arr.length&gt;3){
+      function sum(){//报错}
+  }
+
+</code></pre></div><h2 id="获取元素节点-2"><a href="#获取元素节点-2" class="header-anchor">#</a> 获取元素节点</h2> <p>1、document.querySelector(css选择器) 获取匹配选择器的第一个元素节点，返回DOM节点</p> <p>1、document.querySelectorAll(css选择器) 获取匹配选择器的所有元素节点，返回类数组</p> <h2 id="function方法bind"><a href="#function方法bind" class="header-anchor">#</a> Function方法bind()</h2> <p>1、bind() 用于将当前函数和指定对象绑定（改变this指向），返回一个新函数</p> <div class="language- extra-class"><pre class="language-text"><code>应用
+var btns = document.querySelectorAll('.btn');
+for(var i=0;i&lt;btns.length;i++){
+    btns[i].onclick = function(){
+        //方式1(1)：var self = this;
+        setTimeout(function(){
+            //(2)console.log(self.innerHTML);
+            //方式2.bind()改变this的指向
+            console.log(this.innerHTML);
+        }.bind(this),1000);
+    };
+}
+</code></pre></div><h2 id="获取class的属性"><a href="#获取class的属性" class="header-anchor">#</a> 获取class的属性</h2> <p>操作类名的方法</p> <div class="language- extra-class"><pre class="language-text"><code>classList对象
+	-length:class类名的个数
+	-add():添加class方法
+	-remove():删除class方法
+	-toggle():切换class方法
+	-contains():是否含有某个类，返回布尔值
+</code></pre></div><h2 id="data自定义属性"><a href="#data自定义属性" class="header-anchor">#</a> data自定义属性</h2> <div class="language- extra-class"><pre class="language-text"><code>-w3c规定的自定义属性的格式为[data-**=&quot;&quot;]
+-dataset对象
+	data-age=&quot;17&quot; &lt;==&gt;ele.dataset.age=17;
+</code></pre></div><h1 id="十四、es6"><a href="#十四、es6" class="header-anchor">#</a> 十四、ES6</h1> <h2 id="let变量声明"><a href="#let变量声明" class="header-anchor">#</a> let变量声明</h2> <div class="language- extra-class"><pre class="language-text"><code>let:声明变量
+-变量声明不会提前
+-let不允许相同作用域内多次声明同一变量
+-块级作用域{}  //花括号内为块级作用域
+</code></pre></div><h2 id="const声明常量"><a href="#const声明常量" class="header-anchor">#</a> const声明常量</h2> <div class="language- extra-class"><pre class="language-text"><code>-变量声明不会提前
+-const不允许相同作用域内多次声明同一变量
+-块级作用域
+-声明后无法修改值
+*建议命名时全部大写，用_隔开多个单词
+</code></pre></div><h2 id="解构"><a href="#解构" class="header-anchor">#</a> 解构</h2> <p>声明变量时，从数组或对象中提取值，对变量进行赋值，这被叫做&quot;解构&quot;</p> <div class="language- extra-class"><pre class="language-text"><code>（一）数组解构
+1、常规操作
+	var [a,b,c]=[1,2,3]; //等同于var a=1,b=2,c=3
+2、...表示获取剩余的所有参数
+	var [a,...b]=[1,2,3,4]; //等同于var a=1,b=[2,3,4];
+3、解构失败
+如果变量个数多于赋值数，多余变量为undefined;
+例如：var [a]=1; //报错：1 is not iterable
+解构-左右都要有中括号
+4、指定默认值
+	var [a,b,c=1]=[10,30] //若解构失败，为默认值
+	//a=10,b=30,c=1
+（二）对象解构
+1、常规操作
+	obj={
+        guid:&quot;01&quot;,
+        name:&quot;猫爪杯&quot;,
+        price:888
+	}
+	var {guid,name,price}=obj;
+2、解构失败：变量名与属性名不相同，返回值为undefined
+3、如果变量名与属性名不相同，则必须写成以下格式才能取到值
+{原属性名:变量名}
+4、指定默认值
+	var {a=10}={}; //当a解构失败的话，拿到默认值
+（三）应用
+1、交换变量值
+var x=10;
+var y=20;
+var [x,y]=[y,x];
+2、函数返回多个值
+    //数组：
+    function example(){
+         return [1,2,3]
+    }
+    var [x,y,z] = example();
+    //对象：
+    function example(){
+         return {name:&quot;lemon&quot;,age:18};
+    }
+    var {name,age} = example();
+3、定义函数形参（重点）
+    //数组：
+    function test([x,y,z]){
+        //相当于 var [x,y,z] = [1,2,3];
+    }
+    test([1,2,3]);
+    //对象：
+    function test({name,age}){
+        //相当于 var {name,age} = {name:&quot;lemon&quot;,age:18};
+    }
+    test({name:&quot;lemon&quot;,age:18});
+
+    //常规操作：参数可以设置默认值
+    fuction test({x=0,y=0,z=0}){
+        //相当于var {x=0,y=0,z=0} = {x:10}
+        //为避免没有实参值传入，给形参默认值
+    }
+    test({x:10});
+
+    //扩展：若形参是基本数据类型，函数也可以对形参进行设置默认值的操作。
+    var func1 = function(x=1,y=2){return x+y}；
+    func1(); // 得到 3
+    //同样，也可以用...表示获取剩余参数
+    var func2 = (x, ...args) =&gt; { console.log(args) };
+    func2(1,2,3); // 输出 [2,3]
+</code></pre></div><h2 id="字符串扩展"><a href="#字符串扩展" class="header-anchor">#</a> 字符串扩展</h2> <div class="language- extra-class"><pre class="language-text"><code>字符串方法
+1、includes
+	判断是否包含某个字符，返回布尔值
+'html5'.includes('html');//true
+2、startsWith/endsWith
+	是否以某一字符或某一字符串开头/结尾
+	let str='google';
+    str.startsWith('goo');  //true
+    str.endsWith('e');    //true
+3、repeat(n)
+	得到字符串重复n次后的结果，n可以为小数，但不能为负数
+    'laoxie'.repeat(2);//laoxielaoxie
+
+</code></pre></div><h2 id="字符串模板"><a href="#字符串模板" class="header-anchor">#</a> 字符串模板</h2> <p>template string</p> <div class="language- extra-class"><pre class="language-text"><code>-使用反引号``表示，你可以通过一种更加美观、更加方便的方式向字符串中插入变量
+-格式：${变量|函数}，
+ `你好，我的名字叫${username},接下来是我的自我介绍：${introduce()}` 
+ 模板字符串中所有的空格、新行、缩进，都会原样输出在生成的字符串中。
+</code></pre></div><h2 id="函数扩展"><a href="#函数扩展" class="header-anchor">#</a> 函数扩展</h2> <div class="language- extra-class"><pre class="language-text"><code>（一）箭头函数
+*可以省略function、return、()、{}
+ 1.{}内部只有一句返回代码，可以省略return
+ 	没有参数或有多个参数不能省略()
+ 	//var sum = () =&gt; 3;var sum = (a,b) =&gt; 3;
+ 	只有一个参数，可以省略()
+ 	//var sum = a =&gt; 3;
+ 2.{}内部有多句代码，不能省略{}、return
+ 	=&gt;后紧接着的{}代表代码块
+ 	如果返回一个对象，两种写法
+ 	(1)var sum=()=&gt;({name:'lemon'})
+ 	(2)var sum=()=&gt;{return {name:'lemon}}
+ 3.箭头函数没有this，它的this继承自外部作用域
+ 
+（二）生成器函数
+ 	-function和函数名之间有一个*号,*紧跟function
+ 		函数名():执行后，得到一个状态为suspended的对象{next()}
+    -yield:暂停代码执行
+    -return:终止函数
+    -next():执行后得到一个对象，有两个属性如下:
+    	value:暂停时返回的值(yield)
+    	done:表示函数是否执行完毕
+</code></pre></div><h2 id="set集合"><a href="#set集合" class="header-anchor">#</a> set集合</h2> <div class="language- extra-class"><pre class="language-text"><code>（一）Set集合，
+    类似于数组，但是成员的值都是唯一的，可自动去重。
+    去重的前提是两个值全等于。
+（二）set的方法
+    * add(value)：添加某个值，返回Set结构本身。
+    * delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。
+    * has(value)：返回一个布尔值，表示Set集合中是否存在该值。
+    * clear()：清除所有成员，没有返回值。
+（三）利用set去重数组
+    var arr = [1, 2, 3, 4, 5, 5, 5, 5]；
+    let items = new Set(arr);
+    //去重后将set集合重新转成数组
+    arr = Array.from(items)；
+（四）遍历set集合
+	* forEach()
+	* for…of
+        set.forEach((item,idx)=&gt;{
+            console.log(item,idx);//索引值与item值相同
+        })
+
+        var imgs = new Set(['a','b','c']); //根据KEY遍历 
+        for(let item of imgs){
+             console.log(item); 
+        } 
+</code></pre></div><p>for...of</p> <ul><li>这是最简洁、最直接的遍历数组元素的语法</li> <li>这个方法避开了for-in循环的所有缺陷</li> <li>for…of跟for-in的区别很明显，就是直接取值，而不再取下标了</li> <li>与forEach()不同的是，它可以正确响应break、continue和return语句</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr = [10,12,18,30];
+for (var value of arr) {
+  console.log(value);
+}
+</code></pre></div><blockquote><p>只要有[迭代器Symbol(Symbol.iterator)  ]就可以用for...of遍历</p></blockquote> <blockquote><ul><li>Array</li></ul></blockquote> <blockquote><ul><li>DOM</li></ul></blockquote> <blockquote><ul><li>Set/Map集合</li></ul></blockquote> <blockquote><ul><li>String</li></ul></blockquote> <blockquote><ul><li>不支持普通对象</li></ul></blockquote> <h2 id="对象扩展"><a href="#对象扩展" class="header-anchor">#</a> 对象扩展</h2> <div class="language- extra-class"><pre class="language-text"><code>（一）对象合并方法
+Object.assign(obj1,obj2,...objN);合并对象到obj1，返回obj1
+	var obj1 = {a:1}；
+    var newObj1 = Object.assign(obj1,{b:2});
+    1.合并对象到obj1,所以obj1 = {a:1,b:2}
+    2.返回obj1，传递给newObj1，所以newObj1 = {a:1,b:2}
+
+    var newObj2 = Object.assign(obj1,{b:2},{b:4,c:3});
+    *若存在相同属性，后面的覆盖前面的。//newObj=obj1={a:1,b:4,c:3}
+（二）对象的传递与复制 
+    var obj = {
+        name:&quot;laoxie&quot;,
+        hobby:['大保健','money']
+    }
+    1.对象的传递：
+    var newObj = obj; //此时修改obj的任意属性，也会同时影响newObj
+    2.对象的复制
+    （1）for...in遍历复制
+    for(var key in obj){
+        newObj2[key] = obj[key];
+    }
+    （2）利用assign（）
+		var newObj3 = Object.assign({},obj);
+    	注意：以上两种复制方式，都只支持浅拷贝（对于引用类型，只拷贝引用）
+		obj.hobby.push('羽毛球');//此时也会影响newObj2与newObj3
+
+    （3）深拷贝
+		var newObj3 = JSON.parse(JSON.stringify(person))；
+（三）对象的简写
+	ES6允许在对象之中直接写变量
+    1. 属性简写
+        var myName = 'laoxie';
+        var obj = {myName};//等效于var obj = {myName:'laoxie'}。
+    	//变量名作为属性名，变量值作为属性值。
+    2.变量值作为属性名
+        var obj = {
+            [myName]:18 //等效于 laoxie:18
+        }
+    3.方法简写
+        var obj = {
+            coding(){} //等效于 coding:function(){}
+        }
+</code></pre></div><h2 id="map集合"><a href="#map集合" class="header-anchor">#</a> Map集合</h2> <h3 id="_1-概念-2"><a href="#_1-概念-2" class="header-anchor">#</a> 1.概念</h3> <p>js对象（Object）只能用字符串当作键(属性名)。这让它的使用有了很大的限制。所以ES6推出了一种类似于对象的数据集合：Map集合，它能让所有类型的数据作为键</p> <h3 id="_2-方法"><a href="#_2-方法" class="header-anchor">#</a> 2.方法</h3> <div class="language- extra-class"><pre class="language-text"><code>		* 设置set(key, value)
+		* 获取get(key)
+		* has(key)
+		* delete(key)
+		* clear()
+	（1）创建：
+        let map = new Map(); 
+    （2）设置：
+        map.set('name','laoxie');
+        map.set(6,666);
+        // 把数组作为键
+        var arr = [10,20,30];
+        map.set(arr,'数组');
+        //获取：
+        map.get(arr); //[10,20,30]
+</code></pre></div><h3 id="_3-遍历方法"><a href="#_3-遍历方法" class="header-anchor">#</a> 3.遍历方法</h3> <div class="language- extra-class"><pre class="language-text"><code>    * keys() 获取所有键，可以用Array.from()转成数组
+    * values() 获取所有值，可以用Array.from()转成数组
+    * entries() 获取所有键值对，可以用Array.from()转成数组
+    * 循环遍历，配合解构赋值 for...of
+    for(var item of map){
+        console.log(item); //每个item得到的都是一个数组，索引0为键，索引1为值
+    } 
+    //解构写法：
+    for(var [key,value] of map){
+        console.log(key,value);
+    }
+</code></pre></div><h2 id="symbol数据类型"><a href="#symbol数据类型" class="header-anchor">#</a> Symbol数据类型</h2> <div class="language- extra-class"><pre class="language-text"><code>1.概念
+	ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，一旦创建后就不可更改，是一种类似于字符串的数据类型，但Symbol 值不能与其他类型的值进行运算，否则报错。
+2.创建
+    (1)没有参数的情况
+    var s1 = Symbol();
+    var s2 = Symbol();
+    s1 === s2 // false
+
+    (2)Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了标识和区分，对调式非常有用
+    // 有参数的情况
+    var s1 = Symbol(&quot;foo&quot;);
+    var s2 = Symbol(&quot;foo&quot;);
+    s1 === s2 // false
+
+    (3)Symbol值不能与其他类型的值进行运算
+3.用途
+    * 给对象创建私有属性
+    * 给现有的对象添加属性，可能会产生命名冲突，Symbol的出现解决这个问题
+    var attr = Symbol();
+
+    // 第一种写法,不用加引号
+    var a = {};
+    a[attr] = 'Nani';
+
+    // 第二种写法（注意加方括号，否则回被当作普通属性）
+    var a = {
+        [attr]: 'Nani';
+    };
+
+    // 以上写法都得到同样结果
+    a[attr] // &quot;Nani&quot;
+4.Symbol.for() 登记symbol,会先查找当前Symbol是否存在
+    // 存在：则引用，不存在：则创建登记
+    var s11 = Symbol.for('laoxie');//创建一个Symbol
+    var s12 = Symbol.for('laoxie');//引用一个Symbol
+    //注意：直接使用Symbol()创建的Symbol值的键不会被登记，所以也就获取不到
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-40a3448a><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-概念" class="sidebar-link" data-v-40a3448a>1.概念</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-优点" class="sidebar-link" data-v-40a3448a>2.优点</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-创建方式" class="sidebar-link" data-v-40a3448a>3.创建方式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_4-分类" class="sidebar-link" data-v-40a3448a>4.分类</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_5-函数的执行" class="sidebar-link" data-v-40a3448a>5.函数的执行</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_6-作用域" class="sidebar-link" data-v-40a3448a>6.作用域</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1全局作用域" class="sidebar-link" data-v-40a3448a>1	全局作用域</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2局部作用域" class="sidebar-link" data-v-40a3448a>2	局部作用域</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3变量的访问规则" class="sidebar-link" data-v-40a3448a>3	变量的访问规则</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_4作用域链" class="sidebar-link" data-v-40a3448a>4	作用域链</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_7-函数的实参与形参" class="sidebar-link" data-v-40a3448a>7.函数的实参与形参</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#基本数据类型与引用数据类型的区别" class="sidebar-link" data-v-40a3448a>基本数据类型与引用数据类型的区别</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#①-案例：" class="sidebar-link" data-v-40a3448a>①　案例：</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#②-数据类型作为函数的参数" class="sidebar-link" data-v-40a3448a>②　数据类型作为函数的参数</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#函数的返回值" class="sidebar-link" data-v-40a3448a>函数的返回值</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#this" class="sidebar-link" data-v-40a3448a>this</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#递归" class="sidebar-link" data-v-40a3448a>递归</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#回调函数" class="sidebar-link" data-v-40a3448a>回调函数</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#概念：" class="sidebar-link" data-v-40a3448a>概念：</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#方法" class="sidebar-link" data-v-40a3448a>方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-增删改" class="sidebar-link" data-v-40a3448a>1. 增删改</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-传递与复制" class="sidebar-link" data-v-40a3448a>2. 传递与复制</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#数组的排序算法" class="sidebar-link" data-v-40a3448a>数组的排序算法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-冒泡排序" class="sidebar-link" data-v-40a3448a>1.冒泡排序</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-选择排序" class="sidebar-link" data-v-40a3448a>2.选择排序</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-快速排序" class="sidebar-link" data-v-40a3448a>3.快速排序</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_4-sort-排序" class="sidebar-link" data-v-40a3448a>4.sort()排序</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#数组的传递与复制" class="sidebar-link" data-v-40a3448a>数组的传递与复制</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-传递" class="sidebar-link" data-v-40a3448a>1.传递</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-复制" class="sidebar-link" data-v-40a3448a>2.复制</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#多维数组" class="sidebar-link" data-v-40a3448a>多维数组</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#创建对象" class="sidebar-link" data-v-40a3448a>创建对象</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#对象的操作" class="sidebar-link" data-v-40a3448a>对象的操作</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-添加、修改属性" class="sidebar-link" data-v-40a3448a>(1)添加、修改属性</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-删除属性" class="sidebar-link" data-v-40a3448a>(2)删除属性</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-读取属性值" class="sidebar-link" data-v-40a3448a>(3)读取属性值</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_4-遍历对象for…in" class="sidebar-link" data-v-40a3448a>(4)遍历对象for…in</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#数组与对象的组合" class="sidebar-link" data-v-40a3448a>数组与对象的组合</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#迭代（遍历）方法" class="sidebar-link" data-v-40a3448a>迭代（遍历）方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-foreach" class="sidebar-link" data-v-40a3448a>1. forEach()</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-map" class="sidebar-link" data-v-40a3448a>2.map()</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-filter" class="sidebar-link" data-v-40a3448a>3.filter()</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_4-some" class="sidebar-link" data-v-40a3448a>4.some()</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_5-every" class="sidebar-link" data-v-40a3448a>5.every()</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#归并方法" class="sidebar-link" data-v-40a3448a>归并方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#reduce-fn-initval" class="sidebar-link" data-v-40a3448a>reduce(fn,initVal)</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#reduceright-fn-initval" class="sidebar-link" data-v-40a3448a>reduceRight(fn,initVal)</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#静态方法" class="sidebar-link" data-v-40a3448a>静态方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#array-isarray" class="sidebar-link" data-v-40a3448a>Array.isArray()</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#索引方法" class="sidebar-link" data-v-40a3448a>索引方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#indexof-lastindexof-a-3" class="sidebar-link" data-v-40a3448a>indexOf/lastIndexOf(&quot;a&quot;,3)</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#创建日期时间对象" class="sidebar-link" data-v-40a3448a>创建日期时间对象</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#时间日期对象的方法" class="sidebar-link" data-v-40a3448a>时间日期对象的方法</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#静态方法-2" class="sidebar-link" data-v-40a3448a>静态方法</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#定时器" class="sidebar-link" data-v-40a3448a>定时器</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#概念" class="sidebar-link" data-v-40a3448a>概念</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#window对象下的属性" class="sidebar-link" data-v-40a3448a>window对象下的属性</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#window的常用事件" class="sidebar-link" data-v-40a3448a>window的常用事件</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#系统弹窗" class="sidebar-link" data-v-40a3448a>系统弹窗</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-alert-msg" class="sidebar-link" data-v-40a3448a>1.alert(msg)</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-confirm-msg" class="sidebar-link" data-v-40a3448a>2.confirm(msg)</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-prompt-msg-default" class="sidebar-link" data-v-40a3448a>3.prompt(msg,default)</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_4-open-url-name-options" class="sidebar-link" data-v-40a3448a>4.open(url,name,[options])</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_5-close" class="sidebar-link" data-v-40a3448a>5.close():</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_6-print" class="sidebar-link" data-v-40a3448a>6.print():</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#属性对象-location" class="sidebar-link" data-v-40a3448a>属性对象 location</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#概念-2" class="sidebar-link" data-v-40a3448a>概念</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#获取元素节点" class="sidebar-link" data-v-40a3448a>获取元素节点</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-通过id名" class="sidebar-link" data-v-40a3448a>1.通过id名</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-通过类名" class="sidebar-link" data-v-40a3448a>2.通过类名</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-通过标签名" class="sidebar-link" data-v-40a3448a>3.通过标签名</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_4-通过name属性" class="sidebar-link" data-v-40a3448a>4.通过name属性</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_5-利用节点关系，" class="sidebar-link" data-v-40a3448a>5.利用节点关系，</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_6-节点的三个属性" class="sidebar-link" data-v-40a3448a>6.节点的三个属性</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_7-利用元素节点关系" class="sidebar-link" data-v-40a3448a>7.利用元素节点关系</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_8-节点的创建与插入方法" class="sidebar-link" data-v-40a3448a>8.节点的创建与插入方法</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#元素节点（对象）的属性及方法" class="sidebar-link" data-v-40a3448a>元素节点（对象）的属性及方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-常用属性" class="sidebar-link" data-v-40a3448a>1.常用属性</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-元素方法（修改html属性）" class="sidebar-link" data-v-40a3448a>2.元素方法（修改html属性）</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-盒模型相关" class="sidebar-link" data-v-40a3448a>3.盒模型相关</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#table对象-了解" class="sidebar-link" data-v-40a3448a>table对象(了解)</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-table对象属性-方法" class="sidebar-link" data-v-40a3448a>1. table对象属性&amp;方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-tr对象属性-方法" class="sidebar-link" data-v-40a3448a>2. tr对象属性&amp;方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-td-th对象属性-方法" class="sidebar-link" data-v-40a3448a>3. td/th对象属性&amp;方法</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#鼠标事件" class="sidebar-link" data-v-40a3448a>鼠标事件</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#事件对象" class="sidebar-link" data-v-40a3448a>事件对象</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-事件对象的属性（与鼠标相关）" class="sidebar-link" data-v-40a3448a>1.事件对象的属性（与鼠标相关）</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-光标位置信息" class="sidebar-link" data-v-40a3448a>2.光标位置信息</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#键盘事件" class="sidebar-link" data-v-40a3448a>键盘事件</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#阻止浏览器的默认行为" class="sidebar-link" data-v-40a3448a>阻止浏览器的默认行为</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#事件冒泡" class="sidebar-link" data-v-40a3448a>事件冒泡</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#什么是事件冒泡：" class="sidebar-link" data-v-40a3448a>什么是事件冒泡：</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#停止事件的传播" class="sidebar-link" data-v-40a3448a>停止事件的传播</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#事件委托" class="sidebar-link" data-v-40a3448a>事件委托</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#事件捕获" class="sidebar-link" data-v-40a3448a>事件捕获</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#绑定事件的方式" class="sidebar-link" data-v-40a3448a>绑定事件的方式</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#事件监听器" class="sidebar-link" data-v-40a3448a>事件监听器</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#事件的移除" class="sidebar-link" data-v-40a3448a>事件的移除</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#dom绑定事件的移除" class="sidebar-link" data-v-40a3448a>DOM绑定事件的移除</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#事件监听器移除" class="sidebar-link" data-v-40a3448a>事件监听器移除</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#概念-3" class="sidebar-link" data-v-40a3448a>概念</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#创建正则表达式" class="sidebar-link" data-v-40a3448a>创建正则表达式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#支持正则表达式的字符串方法" class="sidebar-link" data-v-40a3448a>支持正则表达式的字符串方法</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#匹配规则" class="sidebar-link" data-v-40a3448a>匹配规则</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#支持es5的浏览器" class="sidebar-link" data-v-40a3448a>支持ES5的浏览器</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#页面加载事件" class="sidebar-link" data-v-40a3448a>页面加载事件</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#es5的严格模式" class="sidebar-link" data-v-40a3448a>ES5的严格模式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#获取元素节点-2" class="sidebar-link" data-v-40a3448a>获取元素节点</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#function方法bind" class="sidebar-link" data-v-40a3448a>Function方法bind()</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#获取class的属性" class="sidebar-link" data-v-40a3448a>获取class的属性</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#data自定义属性" class="sidebar-link" data-v-40a3448a>data自定义属性</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#let变量声明" class="sidebar-link" data-v-40a3448a>let变量声明</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#const声明常量" class="sidebar-link" data-v-40a3448a>const声明常量</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#解构" class="sidebar-link" data-v-40a3448a>解构</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#字符串扩展" class="sidebar-link" data-v-40a3448a>字符串扩展</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#字符串模板" class="sidebar-link" data-v-40a3448a>字符串模板</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#函数扩展" class="sidebar-link" data-v-40a3448a>函数扩展</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#set集合" class="sidebar-link" data-v-40a3448a>set集合</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#对象扩展" class="sidebar-link" data-v-40a3448a>对象扩展</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#map集合" class="sidebar-link" data-v-40a3448a>Map集合</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_1-概念-2" class="sidebar-link" data-v-40a3448a>1.概念</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_2-方法" class="sidebar-link" data-v-40a3448a>2.方法</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#_3-遍历方法" class="sidebar-link" data-v-40a3448a>3.遍历方法</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/20_Javascript%20%E8%BF%9B%E9%98%B6.html#symbol数据类型" class="sidebar-link" data-v-40a3448a>Symbol数据类型</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.37a344aa.js" defer></script><script src="/assets/js/3.27823f6c.js" defer></script><script src="/assets/js/1.cc6167c7.js" defer></script><script src="/assets/js/14.d72f4213.js" defer></script>
+  </body>
+</html>

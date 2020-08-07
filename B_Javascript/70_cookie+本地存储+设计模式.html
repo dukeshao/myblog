@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>cookie+本地存储+设计模式 | 你的名字</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="持续学习那些不变的底层知识">
+    <link rel="preload" href="/assets/css/0.styles.cf364661.css" as="style"><link rel="preload" href="/assets/js/app.37a344aa.js" as="script"><link rel="preload" href="/assets/js/3.27823f6c.js" as="script"><link rel="preload" href="/assets/js/1.cc6167c7.js" as="script"><link rel="preload" href="/assets/js/18.70ef9823.js" as="script"><link rel="prefetch" href="/assets/js/10.4fc031af.js"><link rel="prefetch" href="/assets/js/11.e3772f3e.js"><link rel="prefetch" href="/assets/js/12.b31c219d.js"><link rel="prefetch" href="/assets/js/13.a43e0022.js"><link rel="prefetch" href="/assets/js/14.d72f4213.js"><link rel="prefetch" href="/assets/js/15.bcb8d2c6.js"><link rel="prefetch" href="/assets/js/16.4b891440.js"><link rel="prefetch" href="/assets/js/17.ba0d4562.js"><link rel="prefetch" href="/assets/js/19.8fa29ce1.js"><link rel="prefetch" href="/assets/js/20.3935a720.js"><link rel="prefetch" href="/assets/js/21.cecaea6f.js"><link rel="prefetch" href="/assets/js/22.7825612a.js"><link rel="prefetch" href="/assets/js/23.bea3b71f.js"><link rel="prefetch" href="/assets/js/24.758aab56.js"><link rel="prefetch" href="/assets/js/25.2f984301.js"><link rel="prefetch" href="/assets/js/26.91717f84.js"><link rel="prefetch" href="/assets/js/27.3bab334b.js"><link rel="prefetch" href="/assets/js/28.47ce6f2a.js"><link rel="prefetch" href="/assets/js/29.5b34be08.js"><link rel="prefetch" href="/assets/js/30.67a38d00.js"><link rel="prefetch" href="/assets/js/31.e68df368.js"><link rel="prefetch" href="/assets/js/32.955a9acb.js"><link rel="prefetch" href="/assets/js/33.67f713ca.js"><link rel="prefetch" href="/assets/js/34.9827b998.js"><link rel="prefetch" href="/assets/js/35.0c08c34a.js"><link rel="prefetch" href="/assets/js/36.1fafef03.js"><link rel="prefetch" href="/assets/js/37.a09721b8.js"><link rel="prefetch" href="/assets/js/38.80a6d3fe.js"><link rel="prefetch" href="/assets/js/39.d7e39752.js"><link rel="prefetch" href="/assets/js/4.c5dc9af6.js"><link rel="prefetch" href="/assets/js/40.c1427058.js"><link rel="prefetch" href="/assets/js/41.f48a2aa1.js"><link rel="prefetch" href="/assets/js/42.268c65ef.js"><link rel="prefetch" href="/assets/js/43.f5bbe7ab.js"><link rel="prefetch" href="/assets/js/44.bb9e88b1.js"><link rel="prefetch" href="/assets/js/45.f11ff196.js"><link rel="prefetch" href="/assets/js/46.8a0134aa.js"><link rel="prefetch" href="/assets/js/47.8ab35044.js"><link rel="prefetch" href="/assets/js/48.d7977d49.js"><link rel="prefetch" href="/assets/js/49.6761377d.js"><link rel="prefetch" href="/assets/js/5.53ecbcea.js"><link rel="prefetch" href="/assets/js/50.9401224f.js"><link rel="prefetch" href="/assets/js/51.55ba23e7.js"><link rel="prefetch" href="/assets/js/52.28d0356d.js"><link rel="prefetch" href="/assets/js/53.e22fa6fb.js"><link rel="prefetch" href="/assets/js/54.6b190cf3.js"><link rel="prefetch" href="/assets/js/55.1393bf52.js"><link rel="prefetch" href="/assets/js/6.d943a739.js"><link rel="prefetch" href="/assets/js/7.c9cdceb6.js"><link rel="prefetch" href="/assets/js/8.45f2fa75.js"><link rel="prefetch" href="/assets/js/9.7f603727.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cf364661.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>你的名字</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Duke Shao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="你的名字" class="logo"> <span class="site-name">你的名字</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/B_Javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  B_Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/A_HTML+CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  A_HTML+CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/C_Typescript/" class="nav-link"><i class="iconfont undefined"></i>
+  C_Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/D_AngularJS/" class="nav-link"><i class="iconfont undefined"></i>
+  D_AngularJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/G_Git/" class="nav-link"><i class="iconfont undefined"></i>
+  G_Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/J_加密解密/" class="nav-link"><i class="iconfont undefined"></i>
+  J_加密解密
+</a></li><li class="dropdown-item"><!----> <a href="/categories/K_浏览器兼容/" class="nav-link"><i class="iconfont undefined"></i>
+  K_浏览器兼容
+</a></li><li class="dropdown-item"><!----> <a href="/categories/L_Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  L_Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/M_服务器部署/" class="nav-link"><i class="iconfont undefined"></i>
+  M_服务器部署
+</a></li><li class="dropdown-item"><!----> <a href="/categories/N_MAC使用/" class="nav-link"><i class="iconfont undefined"></i>
+  N_MAC使用
+</a></li><li class="dropdown-item"><!----> <a href="/categories/H_Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  H_Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/I_Hexo博客/" class="nav-link"><i class="iconfont undefined"></i>
+  I_Hexo博客
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/head.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Duke Shao
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>42</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>24</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/B_Javascript/" class="nav-link"><i class="iconfont undefined"></i>
+  B_Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/A_HTML+CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  A_HTML+CSS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/C_Typescript/" class="nav-link"><i class="iconfont undefined"></i>
+  C_Typescript
+</a></li><li class="dropdown-item"><!----> <a href="/categories/D_AngularJS/" class="nav-link"><i class="iconfont undefined"></i>
+  D_AngularJS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/G_Git/" class="nav-link"><i class="iconfont undefined"></i>
+  G_Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/J_加密解密/" class="nav-link"><i class="iconfont undefined"></i>
+  J_加密解密
+</a></li><li class="dropdown-item"><!----> <a href="/categories/K_浏览器兼容/" class="nav-link"><i class="iconfont undefined"></i>
+  K_浏览器兼容
+</a></li><li class="dropdown-item"><!----> <a href="/categories/L_Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  L_Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/categories/M_服务器部署/" class="nav-link"><i class="iconfont undefined"></i>
+  M_服务器部署
+</a></li><li class="dropdown-item"><!----> <a href="/categories/N_MAC使用/" class="nav-link"><i class="iconfont undefined"></i>
+  N_MAC使用
+</a></li><li class="dropdown-item"><!----> <a href="/categories/H_Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  H_Docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/I_Hexo博客/" class="nav-link"><i class="iconfont undefined"></i>
+  I_Hexo博客
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>cookie+本地存储+设计模式</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Duke Shao</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2020
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>cookie+本地存储+设计模式</h1> <hr> <div data-v-aa64b9d0><i class="iconfont reco-account" data-v-aa64b9d0><span data-v-aa64b9d0>Duke Shao</span></i> <i class="iconfont reco-date" data-v-aa64b9d0><span data-v-aa64b9d0>2015-10-08 23:18:33</span></i> <!----> <i class="iconfont reco-tag tags" data-v-aa64b9d0><span class="tag-item" data-v-aa64b9d0>Javascript</span><span class="tag-item" data-v-aa64b9d0>cookie</span><span class="tag-item" data-v-aa64b9d0>本地存储</span><span class="tag-item" data-v-aa64b9d0>设计模式</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="网络知识"><a href="#网络知识" class="header-anchor">#</a> 网络知识</h1> <h2 id="通信协议"><a href="#通信协议" class="header-anchor">#</a> 通信协议</h2> <p>通信规则，设备与设备之间通信时共同遵守的规则</p> <h2 id="tcp-udp-ip"><a href="#tcp-udp-ip" class="header-anchor">#</a> TCP/UDP/IP</h2> <p>IP： Internet Protocol（网络之间互连的协议），规定了计算机在因特网上进行通信时应当遵守的规则</p> <ul><li>IP地址：4个字节, 一共32位 ，用来标识设备在网络中的位置</li> <li>本机ip 127.0.0.1</li></ul> <p>TCP：Transmission Control Protocol（传输控制协议）</p> <ul><li>TCP面向连接的协议（通信之前必须先建立连接）</li> <li>TCP相对可靠，它建立连接的过程称为3次握手</li> <li>经历3次握手，才能建立连接</li> <li>所有的消息传送，需要对方确认送达</li></ul> <blockquote><p>//正常通信
+A：&quot;土豆，土豆，我是茄子，收到请回答&quot;
+B：&quot;茄子，茄子，我是土豆，收到消息，有什么指示？&quot;
+A：&quot;没事，没事，我以为你挂了呢&quot;
+A：&quot;开始传送消息...&quot;</p></blockquote> <blockquote><p>//如果对方没回应，则不断重复发送当前消息，直至对方收到回应为止。
+A：&quot;茄子，茄子，我是土豆，我被人油炸了，现在改名叫薯片，收到请回答&quot;
+............
+A：&quot;茄子，茄子，我是土豆，我被人油炸了，现在改名叫薯片，收到请回答，第2遍&quot;
+............
+A：&quot;茄子，茄子，我是土豆，我被人油炸了，现在改名叫薯片，收到请回答，第3遍&quot;
+............
+B：&quot;薯片，薯片，我收到消息&quot;
+因此可以确保数据的准确送达</p></blockquote> <p>UDP:面向数据报的协议 (不可靠的协议)，如果TCP比作是打电话，那么UDP就是在发短信</p> <ul><li>无需建立连接，发送消息也无需对方确认</li> <li>无法保证数据的发送顺序，以及准确率</li> <li>UDP通常用于视频、语音等通信（丢掉了一帧画面是无所谓的）</li></ul> <h2 id="http-https"><a href="#http-https" class="header-anchor">#</a> http/https</h2> <p>超文本传输协议HyperText Transfer Protocol，基于TCP协议的一种高级协议, 用于客户端和服务器直接的通信.</p> <p>http的特点是，请求完成后就立即断开与服务器的连接</p> <blockquote><p>缺点:
+通信使用明文（不加密），内容可能会被窃听
+不适用特定的Web服务器，如：聊天室，消息广播</p> <p>http://1000phone.com/</p> <p>http://localhost:8080/1810/lesson/14.Cookie/site/html/03.cookie%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86.html</p></blockquote> <h2 id="socket"><a href="#socket" class="header-anchor">#</a> socket</h2> <p>是一种通信模式，客户端与服务端一直保持着连接，用于随时传输数据</p> <h1 id="cookie"><a href="#cookie" class="header-anchor">#</a> cookie</h1> <h2 id="cookie的概念"><a href="#cookie的概念" class="header-anchor">#</a> cookie的概念</h2> <p>cookie 是客户端与服务器端进行通讯使用的一个能够在浏览器本地化存储的技术</p> <blockquote><p>PS：chrome不支持本地文件的cookie读写</p></blockquote> <h2 id="cookie的基本设置及获取"><a href="#cookie的基本设置及获取" class="header-anchor">#</a> cookie的基本设置及获取</h2> <div class="language- extra-class"><pre class="language-text"><code>设置:document.cookie = 'name=value'
+    * 一次只能写入一个cookie
+读取:document.cookie
+	* 一次性读取所有cookie,是一个字符串。里面的多个cookie值用； 隔开
+</code></pre></div><h3 id="案例：保存图片拖拽位置"><a href="#案例：保存图片拖拽位置" class="header-anchor">#</a> 案例：保存图片拖拽位置</h3> <div class="language- extra-class"><pre class="language-text"><code>// 1.鼠标松开，保存图片位置。即设置cookie：保存left,top
+document.cookie = 'left=' + girl.style.left;//100px
+document.cookie = 'top=' + girl.style.top;//100px
+// 2.页面加载，获取cookie：获取top,left
+var cookies = document.cookie;//得到所有cookie
+cookies = cookies.split('; ');
+//3. 遍历数组，找出top,left,给图片设置位置
+cookies.forEach(function(cookie){
+    var arr = cookie.split('=');
+    if(arr[0] === 'left' || arr[0] === 'top'){
+    	girl.style[arr[0]] = arr[1];
+    }
+});
+</code></pre></div><h3 id="案例-七天免登陆"><a href="#案例-七天免登陆" class="header-anchor">#</a> 案例:七天免登陆</h3> <div class="language- extra-class"><pre><code>btnSubmit.onclick = function(){
+	// 5.表单submit按下即提交，不管满不满足条件。所以阻止默认行为
+	e.preventDefault();
+    // 1.获取用户名密码
+    var _username = username.value.trim();
+    var _password = password.value;
+    //2.若用户名长度为0，退出函数。
+    if(_username.length===0){
+        alert('用户名不能为空');
+        return;
+    }
+    //3.判断是否勾选&quot;7天内免登陆&quot;选项。若勾选保存cookie
+    if(checkbox.checked){
+        var d = new Date();
+        d.setDate(d.getDate()+7);//d此时是一个UTC时间对象，转成字符串格式
+    	document.cookie = 'username=' + _username + ';expires='+d.toUTCString();
+    }
+    //4.不管有没有勾选，点击提交，显示跳转页面
+	location.href = 'http://www.baidu.com';
+}
+// 6.下一次访问：判断页面是否存在cookie，是否存在username的cookie，若存在自动登录，即自动跳转到百度
+var cookies = document.cookie;
+//（1）判断页面是否存在cookie，即cookie长度不为0
+if(cookies.length&gt;0){
+    cookies = cookies.split('; ');
+    cookies.forEach(function(item){
+        var arr = item.split('=');
+        //（2）是否存在username的cookie
+        if(arr[0] === 'username'){
+        	location.href = 'http://www.baidu.com';
+        }
+    });
+}
+</code></pre></div><h2 id="cookie的组成部分"><a href="#cookie的组成部分" class="header-anchor">#</a> cookie的组成部分</h2> <div class="language- extra-class"><pre class="language-text"><code>格式：'name=value[;expires=xx][;path=/][;domain=xxx]'
+参数：
+	expires：有效期
+		默认Session：临时cookie（关闭浏览器会被清除）
+		格式：'expires=' + d.toUTCString
+	path：保存cookie的位置
+		默认当前html所在目录
+		格式：'path=/'
+    domain：域名
+    	默认：当前域名
+读取：document.cookie（读取当前能访问的所有cookie）
+	当前目录-&gt;根目录
+</code></pre></div><h2 id="封装cookie的操作"><a href="#封装cookie的操作" class="header-anchor">#</a> 封装cookie的操作</h2> <div class="language- extra-class"><pre><code>var Cookie = {
+	get:function(key){
+		// 1.先获取所有cookie，若cookie没有值，返回空字符串
+		var cookies = document.cookie;
+		if(cookies.length === 0){
+			return '';
+		}
+        // 2.拆分每一个cookie
+        cookies = cookies.split('; ');
+        for(var i=0;i&lt;cookies.length;i++){
+            var arr = cookies[i].split('=');
+            if(arr[0] === key){
+                return arr[1];
+            }
+        }
+    },
+    set:function(key,value,date,path){
+    	//拼接字符串
+        var str = key + '=' + value;
+        if(date){
+            str += ';expires=' + date.toUTCString();
+        }
+        if(path){
+            str += ';path='+path;
+        }
+        document.cookie = str;
+    },
+    remove:function(key,path){
+    	//获取过期的日期，重新设置cookie
+        var d = new Date();
+        d.setDate(d.getDate()-1);
+        this.set(key,'x',d,path);
+    },
+
+    // 清空cookie
+    clear:function(){
+    }
+}
+</code></pre></div><h2 id="cookie的限制"><a href="#cookie的限制" class="header-anchor">#</a> cookie的限制</h2> <blockquote><p>数量50个（不同浏览器值不同）</p> <p>大小2m（不同浏览器值不同）</p> <p>只能写入字符串</p></blockquote> <h2 id="json"><a href="#json" class="header-anchor">#</a> JSON</h2> <div class="language- extra-class"><pre class="language-text"><code>* 转换
+    * 对象/数组 -&gt; json字符串：JSON.stringify()
+    * json字符串 -&gt; 对象/数组：JSON.parse()
+* 格式：
+    * 属性名和字符串必须使用双引号
+    * 不能有注释
+    * 不能存在多余逗号
+* 属性值必须为以下类型
+    * String
+    * Number
+    * Boolean
+    * Object
+    * Array
+    * Null
+</code></pre></div><h3 id="案例：将商品添加到购物车列表"><a href="#案例：将商品添加到购物车列表" class="header-anchor">#</a> 案例：将商品添加到购物车列表</h3> <div class="language- extra-class"><pre><code>// 3.每次刷新，拿到上一次的存放值。第一次是为空数组
+// * 若已经存在值，默认为JSON字符串，要转回数组
+var goodslist = Cookie.get('goodslist') || [];
+if(typeof goodslist === 'string'){
+    goodslist = JSON.parse(goodslist);
+}
+// 1.利用事件委托实现添加到购物车的效果
+goods.onclick = function(e){
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+    if(target.parentNode.className === 'add2cart'){
+        // 2.若当前为按钮被点击
+        // （1）生成一个商品信息对象{guid，name，imgurl，price，qty（商品数量）}
+        // （2）推入数组，将数组添加到cookie里面
+        // （3）考虑如果商品信息已经添加过，则应该增加数组里面的该商品数量
+        // 	* 第一步:判断当前的guid是否在数组存在。
+        //  * 第二步:若存在，拿到该商品信息在数组中的索引，利用索引将qty++
+        var currentLi = target.parentNode.parentNode;
+        var guid = currentLi.getAttribute('data-guid');
+        var idx;
+        var has = goodslist.some(function(g,i){
+            idx = i;
+            return g.guid === guid;
+        });
+        if(has){
+            goodslist[idx].qty++;
+        }else{
+            var goods = {
+                guid:guid,
+                name:currentLi.children[1].innerText,
+                imgurl:currentLi.children[0].src,
+                price:currentLi.children[2].innerText,
+                // 商品数量
+                qty:1
+            }
+            goodslist.push(goods);
+        }
+        document.cookie = 'goodslist='+ JSON.stringify(goodslist);
+    }
+</code></pre></div><h3 id="案例：显示购物车列表"><a href="#案例：显示购物车列表" class="header-anchor">#</a> 案例：显示购物车列表</h3> <div class="language- extra-class"><pre><code>//1.获取goodslist的cookie，根据cookie数据生成html结构
+//2.遍历时同时计算总价给subPrice元素赋值
+var goodslist;
+render();
+function render(){
+    goodslist = Cookie.getCookie('goodslist') || [];
+    if(typeof goodslist === 'string'){
+    	goodslist = JSON.parse(goodslist);
+    }
+    //2.遍历时，同时计算商品金额
+    var total = 0;
+    var ul = document.createElement('ul');
+    ul.innerHTML = goodslist.map(function(goods){
+        total += goods.price * goods.qty;
+        return '&lt;li data-guid=&quot;'+goods.guid+'&quot;&gt;' + 
+            '&lt;img src=&quot;'+goods.imgurl+'&quot;&gt;' + 
+            '&lt;h4&gt;'+goods.name+'&lt;/h4&gt;' + 
+            '&lt;p class=&quot;price&quot;&gt;价格：&lt;span&gt;'+goods.price+'&amp;times;'+goods.qty+'&lt;/span&gt;&lt;/p&gt;' + 
+            '&lt;span class=&quot;btn-close&quot;&gt;&amp;times;&lt;/span&gt;' + 
+            '&lt;/li&gt;'；
+    }).join('');
+    carList.innerHTML = '';
+    carList.appendChild(ul);
+    subPrice.innerHTML = total.toFixed(2);
+}
+// 3.点击按钮，移除cookie数据，重新渲染商品列表。同时阻止浏览器默认行为
+btnClear.onclick = function(){
+    Cookie.remove('goodslist');
+    render();
+    return false;
+}
+//4.当点击某个商品的删除时
+//（1）获取到当前商品的guid，遍历数组goodslist，根据guid值相同，找到被删除的元素在数组中的索引。
+//（2）通过索引，删除goodslist的中的某个商品。之后推出循环
+//（3）重新生成cookie后，渲染
+carList.onclick = function(e){
+    e = e || window.event;
+    var target = e.target || e.srcElement;
+    if(target.className === 'btn-close'){
+        var currentLi = target.parentNode;
+        var guid = currentLi.getAttribute('data-guid');
+        for(var i=0;i&lt;goodslist.length;i++){
+            if(goodslist[i].guid === guid){
+                goodslist.splice(i,1);
+                break;
+            }
+        }
+        Cookie.set('goodslist',JSON.stringify(goodslist));
+        render();
+    }
+}
+</code></pre></div><h1 id="本地存储web-storage"><a href="#本地存储web-storage" class="header-anchor">#</a> 本地存储Web Storage</h1> <h2 id="好处"><a href="#好处" class="header-anchor">#</a> 好处</h2> <p>减少网络流量：一旦数据保存在本地后，就可以避免再向服务器请求数据，因此减少不必要的数据请求，减少数据在浏览器和服务器间不必要地来回传递。</p> <p>快速显示数据：性能好，从本地读数据比通过网络从服务器获得数据快得多，本地数据可以即时获得。再加上网页本身也可以有缓存，因此整个页面和数据都在本地的话，可以立即显示。</p> <p>临时存储：很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后数据就可以丢弃了，这种情况使用sessionStorage非常方便。</p> <p><strong>localStorage的局限</strong></p> <p>1、浏览器的大小不统一，并且在IE8以上的IE版本才支持localStorage这个属性</p> <p>2、目前所有的浏览器中都会把localStorage的值类型限定为string类型，这个在对我们日常比较常见的JSON对象类型需要一些转换</p> <h2 id="sessionstorage、localstorage、cookie的区别"><a href="#sessionstorage、localstorage、cookie的区别" class="header-anchor">#</a> sessionStorage、localStorage、cookie的区别</h2> <h3 id="共同点："><a href="#共同点：" class="header-anchor">#</a> 共同点：</h3> <p>都是保存在浏览器端，并且是同源的（URL的协议、端口、主机名是相同的，只要有一个不同就属于不同源）</p> <h3 id="不同点："><a href="#不同点：" class="header-anchor">#</a> 不同点：</h3> <p>1、cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递，而sessionStorage和localStorage不会自动把数据发送给服务器，仅在本地保存。cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。</p> <p>2、存储大小限制也不同，cookie数据不能超过4K，同时因为每次http请求都会携带cookie、所以cookie只适合</p> <p>保存很小的数据，如会话标识。sessionStorage和localStorage虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</p> <p>3、数据有效期不同，sessionStorage仅仅在当前浏览器窗口关闭之前有效；localStorage始终有效，窗口或者</p> <p>浏览器关闭之后也一直保存，因此作用持久数据；cookie，只在设置cookie过期时间之前有效，即使窗口关闭或者浏览器关闭。</p> <p>4、作用域不同：sessionStorage在不同的浏览器窗口中不共享，即使是同一个页面，localStorage在所有的同源窗口中是共享的，cookie也是在所有同源的窗口中共享的。（只要URL的协议、端口、主机名三者中有一个不同，就属于不同的文档源）</p> <h2 id="增删改查"><a href="#增删改查" class="header-anchor">#</a> 增删改查</h2> <h3 id="写入"><a href="#写入" class="header-anchor">#</a> 写入</h3> <div class="language- extra-class"><pre class="language-text"><code>if(！window.localStorage){
+    alert(&quot;浏览器不支持localstorage&quot;);
+    return false;
+}else{
+    var storage=window.localStorage;
+    //写入a字段
+    storage[&quot;a&quot;]=1;
+    //写入b字段
+    storage.a=1;
+    //写入c字段
+    storage.setItem(&quot;c&quot;,3);
+    console.log(typeof storage[&quot;a&quot;]);
+    console.log(typeof storage[&quot;b&quot;]);
+    console.log(typeof storage[&quot;c&quot;]);
+}
+</code></pre></div><h3 id="读取"><a href="#读取" class="header-anchor">#</a> 读取</h3> <div class="language- extra-class"><pre class="language-text"><code>var storage=window.localStorage;
+storage[&quot;a&quot;]=1;
+//第一种方法读取
+var a=storage.a;
+//第二种方法读取
+var b=storage[&quot;a&quot;];     
+//第三种方法读取
+var c=storage.getItem(&quot;a&quot;);
+</code></pre></div><h3 id="修改（同写入）"><a href="#修改（同写入）" class="header-anchor">#</a> 修改（同写入）</h3> <h3 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h3> <p>1、将localStorage的所有内容清除</p> <div class="language- extra-class"><pre class="language-text"><code>var storage=window.localStorage;
+storage.clear();
+</code></pre></div><p>2、 将localStorage中的某个键值对删除</p> <div class="language- extra-class"><pre class="language-text"><code>var storage=window.localStorage;
+storage.a=1;
+storage.removeItem(&quot;a&quot;);
+</code></pre></div><h2 id="获取键"><a href="#获取键" class="header-anchor">#</a> 获取键</h2> <p>使用key()方法，向其中出入索引即可获取对应的键</p> <div class="language- extra-class"><pre class="language-text"><code>var storage=window.localStorage;     
+for(var i=0;i&lt;storage.length;i++){
+    var key=storage.key(i);
+    console.log(key);
+}
+</code></pre></div><h1 id="重载-刷新当前页面"><a href="#重载-刷新当前页面" class="header-anchor">#</a> 重载/刷新当前页面</h1> <p>1、reload 方法，该方法强迫浏览器刷新当前页面。
+语法：location.reload([bForceGet])
+参数： bForceGet， 可选参数， 默认为 false，从客户端缓存里取当前页。true, 则以 GET 方式，从服务端取最新的页面, 相当于客户端点击 F5(“刷新”)
+2、 replace 方法，该方法通过指定URL替换当前缓存在历史里（客户端）的项目，因此当使用replace方法之后，你不能通过“前进”和“后退”来访问已经被替换的URL。
+语法： location.replace(URL)
+通常使用： location.reload() 或者是 history.go(0) 来做。
+此方法类似客户端点F5刷新页面，所以页面method=”post”时，会出现”网页过期”的提示。
+因为Session的安全保护机制。
+当调用 location.reload() 方法时， aspx页面此时在服务端内存里已经存在， 因此必定是 IsPostback 的。
+如果有这种应用： 需要重新加载该页面，也就是说期望页面能够在服务端重新被创建，期望是 Not IsPostback 的。
+这里，location.replace() 就可以完成此任务。被replace的页面每次都在服务端重新生成。
+代码： location.replace(location.href);
+3、返回并刷新页面：
+location.replace(document.referrer);
+document.referrer //前一个页面的URL</p> <p>不要用 history.go(-1)，或 history.back();来返回并刷新页面，这两种方法不会刷新页面。</p> <p>4、Javascript刷新页面的几种方法：</p> <p>1，history.go(0)</p> <p>2，location.reload()</p> <p>3，location=location</p> <p>4，location.assign(location)</p> <p>5，document.execCommand('Refresh')</p> <p>6，window.navigate(location)</p> <p>7，location.replace(location)</p> <p>8，document.URL=location.href</p> <h1 id="设计模式"><a href="#设计模式" class="header-anchor">#</a> 设计模式</h1> <h2 id="一、工厂模式"><a href="#一、工厂模式" class="header-anchor">#</a> 一、工厂模式</h2> <p>简单版工厂模式</p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token keyword">function</span> <span class="token function">createBuwawa</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>eyes<span class="token punctuation">,</span>mouth</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> obj<span class="token operator">=</span><span class="token punctuation">{</span>
+        name<span class="token operator">:</span>name<span class="token punctuation">,</span>
+        eyes<span class="token operator">:</span>eyes<span class="token punctuation">,</span>
+        mouth<span class="token operator">:</span>mouth
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> peiqi<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">createBuwawa</span><span class="token punctuation">(</span><span class="token string">&quot;佩奇&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;red&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;big&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>进阶版工厂模式</p> <div class="language-js extra-class"><pre class="language-js"><code>生产人员与取餐窗口相分离
+<span class="token number">1.</span><span class="token function">麦当劳的工作人员</span><span class="token punctuation">(</span>生产汉堡包<span class="token punctuation">,</span>薯条<span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Creator</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//相当于在构造函数书写属性</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">create</span><span class="token punctuation">(</span><span class="token parameter">food</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//生产食物</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Chuangkou</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>food<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token number">2.</span><span class="token function">取餐窗口</span><span class="token punctuation">(</span>提示、取餐<span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">Chuangkou</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">food</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>food<span class="token operator">=</span>food<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>food<span class="token operator">+</span><span class="token string">&quot;已做好&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token number">3.</span>调用
+<span class="token keyword">var</span> xiaoming<span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Creator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> shutiao<span class="token operator">=</span>xiaomming<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string">&quot;薯条&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+shutiao<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>设计思想</p> <p>工人与服务员相分离</p> <p>符合开放封闭原则</p> <h2 id="二、单例模式"><a href="#二、单例模式" class="header-anchor">#</a> 二、单例模式</h2> <p>如果不存在实例对象,那么就创建实例对象,如果存在实例对象,那么就用该对象</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Single</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+Single<span class="token punctuation">.</span>getInstance<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> instance<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>instance<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            instance<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Single</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> s1<span class="token operator">=</span>Single<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> s2<span class="token operator">=</span>Single<span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>s1<span class="token operator">==</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="三、适配者模式"><a href="#三、适配者模式" class="header-anchor">#</a> 三、适配者模式</h2> <p>旧接口格式和使用者不兼容</p> <p>中间加一个适配转换接口</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Socket</span><span class="token punctuation">{</span>
+	<span class="token function">specificRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token string">'德国标准插口'</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Adapter</span><span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Socket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">let</span> info <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>socket<span class="token punctuation">.</span><span class="token function">specificRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>info<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-转换器-中国标准接口</span><span class="token template-punctuation string">`</span></span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> target <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Adater</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> res <span class="token operator">=</span> target<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="四、代理模式"><a href="#四、代理模式" class="header-anchor">#</a> 四、代理模式</h2> <p>使用者无权访问目标对象</p> <p>中间加代理，通过代理做授权和控制</p> <div class="language-js extra-class"><pre class="language-js"><code>（<span class="token keyword">function</span>（）<span class="token punctuation">{</span>
+<span class="token keyword">class</span> <span class="token class-name">ReadImg</span><span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">filename</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>filename <span class="token operator">=</span> filename<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">loadFromDisk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//模拟从硬盘中加载</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">loadFromDisk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;loading...&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;display...&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//代理</span>
+<span class="token keyword">class</span> <span class="token class-name">ProxyImg</span><span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">filename</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>readImg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ReadImg</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>readImg<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">return</span> ProxyImg；
+<span class="token punctuation">}</span>）（）
+<span class="token keyword">let</span> proxyImg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ProxyImg</span><span class="token punctuation">(</span><span class="token string">&quot;1.png&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+proxyImg<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>场景</p> <p>事件代理</p> <p>$.proxy</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#dv&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span>$<span class="token punctuation">.</span><span class="token function">proxy</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//使用外部函数的this</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span><span class="token string">'red'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>ES6 proxy</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> star <span class="token operator">=</span> <span class="token punctuation">{</span>
+	name <span class="token operator">:</span> <span class="token string">&quot;张**&quot;</span><span class="token punctuation">,</span>
+	age <span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+	phone <span class="token operator">:</span> <span class="token string">'13900001111'</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 明星经纪人</span>
+<span class="token keyword">let</span> agent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>star<span class="token punctuation">,</span><span class="token punctuation">{</span>
+	<span class="token function-variable function">get</span> <span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>key</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>key <span class="token operator">==</span> <span class="token string">&quot;phone&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token comment">//返回经纪人自己的电话</span>
+			<span class="token keyword">return</span> <span class="token string">'16899997777'</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>key <span class="token operator">==</span> <span class="token string">&quot;price&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token comment">//经纪人报价</span>
+			<span class="token keyword">return</span> <span class="token string">'120000'</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">//此时target为stat对象</span>
+		<span class="token keyword">return</span> target<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token function-variable function">set</span> <span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>key<span class="token punctuation">,</span>val</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>key <span class="token operator">==</span> <span class="token string">&quot;customPrice&quot;</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span>val <span class="token operator">&lt;</span> <span class="token number">100000</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;价格太低&quot;</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+				target<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span>
+				<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>agent<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//undefined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>agent<span class="token punctuation">.</span>phone<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//16899997777</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>agent<span class="token punctuation">.</span>price<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//120000</span>
+</code></pre></div><p>适配器模式vs代理模式</p> <p>适配器模式：提供一个不同的接口（如不同版本的插头）</p> <p>代理模式：提供一模一样的接口</p> <h2 id="五、观察者模式"><a href="#五、观察者模式" class="header-anchor">#</a> 五、观察者模式</h2> <p>发布&amp;订阅, 一对多</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//主题：保存状态，状态变化之后触发所有观察者对象</span>
+<span class="token keyword">class</span> <span class="token class-name">Subject</span><span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>observers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">setState</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> state<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">notifyAllObservers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">notifyAllObservers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>observers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">observers</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+			observers<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">attach</span><span class="token punctuation">(</span><span class="token parameter">observer</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>observers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Observer</span><span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>subject</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>subject  <span class="token operator">=</span> subject<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>subject<span class="token punctuation">.</span><span class="token function">attach</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">update,state:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>subject<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Subject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//主题，大盒子保存所有观察者</span>
+<span class="token keyword">let</span> o1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Observer</span><span class="token punctuation">(</span><span class="token string">&quot;o1&quot;</span><span class="token punctuation">,</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//o1是观察者</span>
+<span class="token keyword">let</span> o2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Observer</span><span class="token punctuation">(</span><span class="token string">&quot;o2&quot;</span><span class="token punctuation">,</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//02是观察者</span>
+s<span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//只要其中一个观察者状态概念，</span>
+</code></pre></div><p>网页事件绑定</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#dv&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#dv&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#dv&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>promise</p> <div class="language-js extra-class"><pre class="language-js"><code>p1<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="六、组合模式"><a href="#六、组合模式" class="header-anchor">#</a> 六、组合模式</h2> <p>生成树形结构,表示&quot;整体-部分&quot;关系</p> <p>让整体和部分都具有一致的操作方式</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+	tag<span class="token operator">:</span> <span class="token string">'div'</span><span class="token punctuation">,</span>
+	attr<span class="token operator">:</span> <span class="token punctuation">{</span>
+		id<span class="token operator">:</span> <span class="token string">'div1'</span><span class="token punctuation">,</span>
+		className<span class="token operator">:</span> <span class="token string">'container'</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	children<span class="token operator">:</span> <span class="token punctuation">[</span>
+		<span class="token punctuation">{</span>
+			tag<span class="token operator">:</span> <span class="token string">'p'</span><span class="token punctuation">,</span>
+			attr<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+			children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'123'</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token punctuation">{</span>
+			tag<span class="token operator">:</span> <span class="token string">'p'</span><span class="token punctuation">,</span>
+			attr<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+			children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'456'</span><span class="token punctuation">]</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//======对应的html结构===============</span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;div1&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;container&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">123</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">456</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="七、策略模式"><a href="#七、策略模式" class="header-anchor">#</a> 七、策略模式</h2> <p>不同策略分开处理</p> <p>避免出现大量的if...else或者switch...case</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">type</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type
+	<span class="token punctuation">}</span>
+	<span class="token function">buy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'ordinary'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'普通用户购买'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'member'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'会员用户购买'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">'vip'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'vip用户购买'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> u1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">'ordinary'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+u1<span class="token punctuation">.</span><span class="token function">buy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> u2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">'ordinary'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+u2<span class="token punctuation">.</span><span class="token function">buy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> u3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">'ordinary'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+u3<span class="token punctuation">.</span><span class="token function">buy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">{</span>
+	<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span>money</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>money <span class="token operator">=</span> money<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">buy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		strategies<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>type<span class="token punctuation">]</span><span class="token punctuation">(</span>money<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> strategies <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">ordinary</span> <span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">money</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> money<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">member</span> <span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">money</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> money<span class="token operator">*</span><span class="token number">0.9</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">vip</span> <span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">money</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> money<span class="token operator">*</span><span class="token number">0.8</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-40a3448a><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#通信协议" class="sidebar-link" data-v-40a3448a>通信协议</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#tcp-udp-ip" class="sidebar-link" data-v-40a3448a>TCP/UDP/IP</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#http-https" class="sidebar-link" data-v-40a3448a>http/https</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#socket" class="sidebar-link" data-v-40a3448a>socket</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#cookie的概念" class="sidebar-link" data-v-40a3448a>cookie的概念</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#cookie的基本设置及获取" class="sidebar-link" data-v-40a3448a>cookie的基本设置及获取</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#案例：保存图片拖拽位置" class="sidebar-link" data-v-40a3448a>案例：保存图片拖拽位置</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#案例-七天免登陆" class="sidebar-link" data-v-40a3448a>案例:七天免登陆</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#cookie的组成部分" class="sidebar-link" data-v-40a3448a>cookie的组成部分</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#封装cookie的操作" class="sidebar-link" data-v-40a3448a>封装cookie的操作</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#cookie的限制" class="sidebar-link" data-v-40a3448a>cookie的限制</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#json" class="sidebar-link" data-v-40a3448a>JSON</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#案例：将商品添加到购物车列表" class="sidebar-link" data-v-40a3448a>案例：将商品添加到购物车列表</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#案例：显示购物车列表" class="sidebar-link" data-v-40a3448a>案例：显示购物车列表</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#好处" class="sidebar-link" data-v-40a3448a>好处</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#sessionstorage、localstorage、cookie的区别" class="sidebar-link" data-v-40a3448a>sessionStorage、localStorage、cookie的区别</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#共同点：" class="sidebar-link" data-v-40a3448a>共同点：</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#不同点：" class="sidebar-link" data-v-40a3448a>不同点：</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#增删改查" class="sidebar-link" data-v-40a3448a>增删改查</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#写入" class="sidebar-link" data-v-40a3448a>写入</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#读取" class="sidebar-link" data-v-40a3448a>读取</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#修改（同写入）" class="sidebar-link" data-v-40a3448a>修改（同写入）</a></li><li class="level-3" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#删除" class="sidebar-link" data-v-40a3448a>删除</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#获取键" class="sidebar-link" data-v-40a3448a>获取键</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#一、工厂模式" class="sidebar-link" data-v-40a3448a>一、工厂模式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#二、单例模式" class="sidebar-link" data-v-40a3448a>二、单例模式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#三、适配者模式" class="sidebar-link" data-v-40a3448a>三、适配者模式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#四、代理模式" class="sidebar-link" data-v-40a3448a>四、代理模式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#五、观察者模式" class="sidebar-link" data-v-40a3448a>五、观察者模式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#六、组合模式" class="sidebar-link" data-v-40a3448a>六、组合模式</a></li><li class="level-2" data-v-40a3448a><a href="/B_Javascript/70_cookie+%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8+%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#七、策略模式" class="sidebar-link" data-v-40a3448a>七、策略模式</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.37a344aa.js" defer></script><script src="/assets/js/3.27823f6c.js" defer></script><script src="/assets/js/1.cc6167c7.js" defer></script><script src="/assets/js/18.70ef9823.js" defer></script>
+  </body>
+</html>
